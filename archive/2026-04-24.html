@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Маркетинг-дайджест · 24 апреля 2026</title>
+<title>Инсайты · Маркетинг-дайджест · 24 апреля 2026</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.svg">
+<meta name="description" content="Ежедневный маркетинг-дайджест «Инсайты»: 5 мировых историй и гипотезы для многопрофильных клиник и стоматологий.">
 <style>
   :root{
     --red:#C0392B;
@@ -39,6 +42,10 @@
     font-size:9px;font-weight:600;letter-spacing:3px;
     color:var(--gray);text-transform:uppercase;margin-top:7px;
   }
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-link{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dark2);}
+  .nav-link.active{color:var(--red);}
+  .nav-link:hover{color:var(--red);text-decoration:none;}
   .nav-badge{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;}
 
   /* HERO */
@@ -126,7 +133,7 @@
 <div class="top-bar"></div>
 
 <nav>
-  <div class="logo" aria-label="Инсайты — консалтинговое агентство">
+  <a href="/" class="logo" aria-label="Инсайты — консалтинговое агентство">
     <svg class="logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/>
       <circle cx="28" cy="18" r="11" fill="#C0392B"/>
@@ -137,8 +144,12 @@
       <div class="logo-wordmark"><b>ИН</b><span>сайты</span></div>
       <div class="logo-sub">Консалтинговое агентство</div>
     </div>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link active">Сегодня</a>
+    <a href="/archive/" class="nav-link">Архив</a>
+    <div class="nav-badge">Ежедневный дайджест</div>
   </div>
-  <div class="nav-badge">Ежедневный дайджест</div>
 </nav>
 
 <section class="hero">
