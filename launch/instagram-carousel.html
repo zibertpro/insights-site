@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Инсайты · Карусель для Instagram · Выпуск 001</title>
+<style>
+  :root{
+    --red:#C0392B;
+    --dark:#1A1A1A;
+    --dark2:#3A3A3A;
+    --gray:#9A9A9A;
+    --lgray:#E8E8E8;
+    --bg:#F5F5F5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Segoe UI',Calibri,Arial,sans-serif;
+    background:var(--bg);
+    padding:40px 20px 80px;
+    display:flex;flex-direction:column;align-items:center;gap:40px;
+  }
+
+  .preface{
+    max-width:1080px;width:100%;background:#fff;padding:32px 40px;
+    border-left:4px solid var(--red);font-size:14px;color:var(--dark2);line-height:1.7;
+  }
+  .preface b{color:var(--dark);}
+  .preface code{background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:12px;}
+
+  .slide{
+    width:1080px;height:1350px;background:#fff;position:relative;
+    overflow:hidden;box-shadow:0 4px 30px rgba(0,0,0,.08);
+    flex-shrink:0;
+  }
+  .slide-bar{height:14px;background:var(--red);width:100%;}
+  .slide-content{
+    padding:70px 80px 80px;
+    height:calc(100% - 14px);
+    display:flex;flex-direction:column;
+  }
+  .slide-header{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:46px;
+  }
+  .slide-logo{display:flex;align-items:center;gap:14px;}
+  .slide-logo-eye{width:64px;height:42px;}
+  .slide-logo-text{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:38px;line-height:1;color:#000;letter-spacing:-0.5px;
+  }
+  .slide-logo-text b{font-weight:900;letter-spacing:-1px;}
+  .slide-logo-text span{font-weight:500;}
+  .slide-pager{
+    font-size:13px;font-weight:700;letter-spacing:4px;
+    color:var(--gray);text-transform:uppercase;
+  }
+  .slide-pager b{color:var(--red);}
+
+  .slide-footer{
+    margin-top:auto;
+    display:flex;justify-content:space-between;align-items:flex-end;
+    padding-top:30px;border-top:1px solid var(--lgray);
+  }
+  .slide-footer-brand{
+    font-size:11px;font-weight:700;letter-spacing:3px;
+    color:var(--gray);text-transform:uppercase;
+  }
+  .slide-footer-brand b{color:var(--red);}
+  .slide-swipe{
+    font-size:14px;font-weight:700;letter-spacing:3px;
+    color:var(--red);text-transform:uppercase;
+  }
+
+  /* ───────── COVER ───────── */
+  .cover .slide-content{justify-content:center;text-align:left;}
+  .cover-eyebrow{
+    font-size:18px;font-weight:700;letter-spacing:6px;
+    color:var(--red);text-transform:uppercase;margin-bottom:32px;
+  }
+  .cover-title{
+    font-size:108px;font-weight:800;line-height:1.02;
+    color:var(--dark);margin-bottom:24px;letter-spacing:-2px;
+  }
+  .cover-sub{
+    font-size:42px;font-style:italic;font-weight:600;
+    color:var(--red);line-height:1.2;margin-bottom:60px;
+  }
+  .cover-divider{width:120px;height:5px;background:var(--red);margin-bottom:40px;}
+  .cover-meta{
+    display:flex;flex-direction:column;gap:14px;
+    font-size:20px;color:var(--dark2);
+  }
+  .cover-meta-line{display:flex;align-items:center;gap:18px;}
+  .cover-meta-dot{width:12px;height:12px;border-radius:50%;background:var(--red);}
+
+  /* ───────── STORY ───────── */
+  .story-eyebrow{
+    font-size:18px;font-weight:700;letter-spacing:5px;
+    color:var(--red);text-transform:uppercase;margin-bottom:36px;
+  }
+  .story-stat{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:260px;font-weight:900;font-style:italic;
+    line-height:1;color:var(--red);margin-bottom:24px;
+    letter-spacing:-8px;
+  }
+  .story-stat.compact{font-size:200px;}
+  .story-caption{
+    font-size:40px;font-weight:700;line-height:1.2;
+    color:var(--dark);margin-bottom:40px;
+  }
+  .story-body{
+    font-size:24px;line-height:1.55;color:var(--dark2);
+    border-left:4px solid var(--red);padding-left:26px;
+    max-width:840px;
+  }
+
+  /* ───────── HYPOTHESIS ───────── */
+  .hypo-eyebrow{
+    font-size:18px;font-weight:700;letter-spacing:5px;
+    color:var(--red);text-transform:uppercase;margin-bottom:18px;
+  }
+  .hypo-headline{
+    font-size:48px;font-weight:800;line-height:1.1;
+    color:var(--dark);margin-bottom:50px;letter-spacing:-1px;
+    max-width:880px;
+  }
+  .hypo-headline em{font-style:italic;font-weight:700;color:var(--red);}
+  .hypo-grid{
+    display:flex;flex-direction:column;gap:26px;flex:1;
+  }
+  .hypo-block{
+    padding:30px 34px;background:#fafafa;
+  }
+  .hypo-block.clinic{border-top:5px solid var(--red);}
+  .hypo-block.dental{border-top:5px solid var(--dark);background:#f3f3f3;}
+  .hypo-tag{
+    display:inline-block;font-size:13px;font-weight:700;letter-spacing:3px;
+    padding:7px 16px;text-transform:uppercase;margin-bottom:14px;
+  }
+  .hypo-block.clinic .hypo-tag{background:var(--red);color:#fff;}
+  .hypo-block.dental .hypo-tag{background:var(--dark);color:#fff;}
+  .hypo-title{
+    font-size:30px;font-weight:700;color:var(--dark);
+    line-height:1.2;margin-bottom:14px;
+  }
+  .hypo-body{
+    font-size:21px;line-height:1.5;color:var(--dark2);
+  }
+  .hypo-body em{
+    color:var(--red);font-style:normal;font-weight:700;
+    text-transform:uppercase;font-size:14px;letter-spacing:2px;
+    display:block;margin-bottom:4px;
+  }
+
+  /* ───────── CTA ───────── */
+  .cta .slide-content{justify-content:center;text-align:center;align-items:center;}
+  .cta-eyebrow{
+    font-size:18px;font-weight:700;letter-spacing:6px;
+    color:var(--red);text-transform:uppercase;margin-bottom:32px;
+  }
+  .cta-title{
+    font-size:84px;font-weight:800;line-height:1.05;
+    color:var(--dark);margin-bottom:32px;letter-spacing:-1.5px;
+    max-width:900px;
+  }
+  .cta-sub{
+    font-size:30px;color:var(--dark2);line-height:1.45;
+    margin-bottom:60px;max-width:760px;
+  }
+  .cta-url{
+    background:var(--dark);color:#fff;
+    padding:32px 60px;font-size:30px;font-weight:700;letter-spacing:1px;
+    border-top:5px solid var(--red);
+  }
+  .cta-url b{color:var(--red);}
+  .cta-foot{
+    font-size:20px;color:var(--gray);margin-top:50px;letter-spacing:2px;
+    text-transform:uppercase;font-weight:600;
+  }
+
+  @media print{
+    body{background:#fff;padding:0;gap:0;}
+    .preface{display:none;}
+    .slide{box-shadow:none;page-break-after:always;}
+  }
+</style>
+</head>
+<body>
+
+<div class="preface">
+  <b>Карусель для Instagram · 10 слайдов 1080×1350.</b><br>
+  Структура: обложка → новость → гипотеза (клиника + стоматология) × 4 → CTA. Гипотезы — главный смысловой блок: после каждой новости отдельный слайд с двумя приземлениями.<br><br>
+  Чтобы получить отдельные PNG: <code>Cmd+P → Save as PDF</code> (10-страничный PDF), затем в Превью → Файл → Экспорт → PNG для каждой страницы. Альтернатива — Cmd+Shift+4 в браузере.<br><br>
+  Подмените URL <code>insights-media.netlify.app</code> на финальный адрес Netlify в последнем слайде.
+</div>
+
+<!-- ═══════════════════════ SLIDE 1: COVER ═══════════════════════ -->
+<div class="slide cover">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>01</b> / 10</div>
+    </div>
+
+    <div class="cover-eyebrow">Выпуск 001 · Пилот</div>
+    <h1 class="cover-title">Что случилось<br>в мировом<br>маркетинге</h1>
+    <div class="cover-sub">и как приземлить на<br>клинику и стоматологию</div>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      <div class="cover-meta-line"><span class="cover-meta-dot"></span><span>4 истории · 8 гипотез · ~15 минут</span></div>
+      <div class="cover-meta-line"><span class="cover-meta-dot"></span><span>Marketing Dive · Digiday · WARC</span></div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Консалтинговое агентство</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 2: NEWS 1 — $100M ═══════════════════════ -->
+<div class="slide story">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>02</b> / 10</div>
+    </div>
+
+    <div class="story-eyebrow">История 01 · AI · Платформы</div>
+    <div class="story-stat">$100M</div>
+    <div class="story-caption">Реклама в ChatGPT за несколько недель</div>
+    <div class="story-body">
+      OpenAI превратил чат в торговый центр. Canva, Spotify, Target, DoorDash встроены прямо в диалог. Бренд перестаёт быть результатом поиска и становится функцией ответа.
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Выпуск 001</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 3: HYPOTHESES 1 ═══════════════════════ -->
+<div class="slide hypo">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>03</b> / 10</div>
+    </div>
+
+    <div class="hypo-eyebrow">Приземление · К истории 01</div>
+    <h2 class="hypo-headline">Что делать, пока <em>AI не отвечает</em> вашим именем</h2>
+
+    <div class="hypo-grid">
+      <div class="hypo-block clinic">
+        <span class="hypo-tag">Многопрофильная клиника</span>
+        <div class="hypo-title">Корм для LLM, а не флаер для людей</div>
+        <div class="hypo-body">
+          <em>Гипотеза для теста</em>
+          Спросить ChatGPT «куда обратиться с [симптомом] в [городе]» — и проверить, упоминает ли он вас. Если нет — собрать пакет экспертных материалов по 10 самым частым клиническим запросам пациентов и разместить их на сайте и в качественных медиа.
+        </div>
+      </div>
+      <div class="hypo-block dental">
+        <span class="hypo-tag">Стоматология</span>
+        <div class="hypo-title">Имя врача — единица ответа</div>
+        <div class="hypo-body">
+          <em>Что проверить сейчас</em>
+          Скоро пациент будет спрашивать: «нужен имплантолог в районе X». Модель назовёт имя — чьё, зависит от цифрового следа. Есть ли у ведущего врача интервью, статьи, разборы кейсов, Google Business Profile с отзывами на процедуры?
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Гипотеза</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 4: NEWS 2 — 48% ═══════════════════════ -->
+<div class="slide story">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>04</b> / 10</div>
+    </div>
+
+    <div class="story-eyebrow">История 02 · Поиск · Healthcare</div>
+    <div class="story-stat">48%</div>
+    <div class="story-caption">медицинских запросов теперь дают AI-ответ</div>
+    <div class="story-body">
+      Google AI Overviews съедают органический трафик клиник — CTR падает на 15–47%. Цитирование внутри AI Overview даёт +35% к кликам, но попасть туда сложнее. Schema, FAQ, врач-автор — новая основа SEO.
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Выпуск 001</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 5: HYPOTHESES 2 ═══════════════════════ -->
+<div class="slide hypo">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>05</b> / 10</div>
+    </div>
+
+    <div class="hypo-eyebrow">Приземление · К истории 02</div>
+    <h2 class="hypo-headline">Переезжаем из <em>SEO в «ответ»</em></h2>
+
+    <div class="hypo-grid">
+      <div class="hypo-block clinic">
+        <span class="hypo-tag">Многопрофильная клиника</span>
+        <div class="hypo-title">Schema, FAQ, врач-автор</div>
+        <div class="hypo-body">
+          <em>Что проверить на сайте</em>
+          Есть ли schema.org MedicalClinic / Physician / FAQPage; указан ли автор-врач с регалиями; быстро ли отвечают FAQ на «симптомные» запросы. Переписать 10 самых конверсионных страниц под формат «короткий ответ вверху + детали».
+        </div>
+      </div>
+      <div class="hypo-block dental">
+        <span class="hypo-tag">Стоматология</span>
+        <div class="hypo-title">Видео пациента важнее баннера</div>
+        <div class="hypo-body">
+          <em>Цифра для команды</em>
+          70% потребителей смотрят UGC до покупки. В стоматологии это «до/после», честные отзывы и рассказ о процессе имплантации. Один такой ролик на месяц с реальным пациентом перевешивает квартал контекстной рекламы.
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Гипотеза</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 6: NEWS 3 — −11 ═══════════════════════ -->
+<div class="slide story">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>06</b> / 10</div>
+    </div>
+
+    <div class="story-eyebrow">История 03 · Отчёт · Стратегия</div>
+    <div class="story-stat compact">−11</div>
+    <div class="story-caption">пунктов оптимизма CMO за год</div>
+    <div class="story-body">
+      WARC Marketer's Toolkit 2026: только 54% маркетологов ждут улучшения, год назад таких было 65%. 61% увеличивают инвестиции в creator economy. Главный рефрен — возврат к основам: бренд, отличимость, дифференциация.
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Выпуск 001</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 7: HYPOTHESES 3 ═══════════════════════ -->
+<div class="slide hypo">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>07</b> / 10</div>
+    </div>
+
+    <div class="hypo-eyebrow">Приземление · К истории 03</div>
+    <h2 class="hypo-headline">Ставка <em>на бренд</em>, а не на аукцион</h2>
+
+    <div class="hypo-grid">
+      <div class="hypo-block clinic">
+        <span class="hypo-tag">Многопрофильная клиника</span>
+        <div class="hypo-title">Врач-креатор как медиа-капитал</div>
+        <div class="hypo-body">
+          <em>Гипотеза для теста</em>
+          Выделить 2–3 «медиа-звёзд» среди врачей и системно вкладываться в их медиа: подкасты, экспертные разборы, колонки в нишевых изданиях. Это выигрывает у баннерной рекламы в доверии и долго работает.
+        </div>
+      </div>
+      <div class="hypo-block dental">
+        <span class="hypo-tag">Стоматология</span>
+        <div class="hypo-title">Иммерсивный опыт в клинике</div>
+        <div class="hypo-body">
+          <em>Идея для кампании</em>
+          Пациент покупает не пломбу, а спокойствие. Один иммерсивный элемент — ароматерапия, ритуал встречи, VR-очки во время процедуры — даёт узнаваемость сильнее, чем ещё один флаер со скидкой.
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Гипотеза</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 8: NEWS 4 — 20:1 ═══════════════════════ -->
+<div class="slide story">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>08</b> / 10</div>
+    </div>
+
+    <div class="story-eyebrow">История 04 · Атрибуция · Healthcare</div>
+    <div class="story-stat compact">20:1</div>
+    <div class="story-caption">Звонок в клинику против формы на сайте</div>
+    <div class="story-body">
+      Входящий звонок конвертится в реальную запись в 25–40% случаев. Заявка через форму — около 2%. Last-click как метрика окончательно проиграл healthcare-бенчмаркам. Главный канал атрибуции — телефон.
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Выпуск 001</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 9: HYPOTHESES 4 ═══════════════════════ -->
+<div class="slide hypo">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>09</b> / 10</div>
+    </div>
+
+    <div class="hypo-eyebrow">Приземление · К истории 04</div>
+    <h2 class="hypo-headline">Починить звонок — <em>потом всё остальное</em></h2>
+
+    <div class="hypo-grid">
+      <div class="hypo-block clinic">
+        <span class="hypo-tag">Многопрофильная клиника</span>
+        <div class="hypo-title">Call tracking + аудит колл-центра</div>
+        <div class="hypo-body">
+          <em>Гипотеза для теста</em>
+          Включить call tracking на 2–3 источниках и за 30 дней посчитать реальный CAC по каналу. Параллельно — внутренний аудит: время до ответа, % пропущенных, % доходящих до записи. Самая дешёвая отдача в маркетинге.
+        </div>
+      </div>
+      <div class="hypo-block dental">
+        <span class="hypo-tag">Стоматология</span>
+        <div class="hypo-title">Администратор — главный медиум</div>
+        <div class="hypo-body">
+          <em>Идея для теста</em>
+          Записать 50 недавних звонков (с согласием) и оценить по скоркарду: «назвали имя врача», «предложили слот», «дали цену первичного приёма». В 8 из 10 клиник маркетинг-бюджет сливается именно на этом шаге.
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Гипотеза</div>
+      <div class="slide-swipe">Свайпай →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SLIDE 10: CTA ═══════════════════════ -->
+<div class="slide cta">
+  <div class="slide-bar"></div>
+  <div class="slide-content">
+    <div class="slide-header">
+      <div class="slide-logo">
+        <svg class="slide-logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+          <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+          <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+        </svg>
+        <div class="slide-logo-text"><b>ИН</b><span>сайты</span></div>
+      </div>
+      <div class="slide-pager"><b>10</b> / 10</div>
+    </div>
+
+    <div class="cta-eyebrow">Каждый будний день · 12:00</div>
+    <h2 class="cta-title">Полный выпуск с переводами и гипотезами</h2>
+    <div class="cta-sub">5 мировых историй маркетинга. Гипотезы для клиники и стоматологии. Без воды, без спама.</div>
+    <div class="cta-url">→ <b>insights-media</b>.netlify.app</div>
+    <div class="cta-foot">Завтра в 12:00 — новый выпуск</div>
+
+    <div class="slide-footer">
+      <div class="slide-footer-brand"><b>Инсайты</b> · Консалтинговое агентство</div>
+      <div class="slide-swipe">Конец</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
