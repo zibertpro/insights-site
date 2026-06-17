@@ -3,377 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Инсайты · Новость дня · Google убил лид-форму · 17 июня 2026</title>
+<meta name="description" content="Новость дня от Инсайты, 17 июня 2026: Google заменил лид-форму на чат-агента Gemini прямо внутри рекламы. Что это значит для клиники и как реагировать уже сейчас.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="alternate icon" href="/favicon.svg">
-<meta name="description" content="Маркетинг-дайджест «Инсайты», 27 мая 2026: 5 мировых историй и как на каждую реагировать клинике.">
-<title>Инсайты · Маркетинг-дайджест · 27 мая 2026</title>
 <style>
   :root{
     --red:#C0392B;--dark:#2A2A2A;--dark2:#4A4A4A;--gray:#9A9A9A;
     --lgray:#E8E8E8;--bg-row:#F3F3F3;--bg-veb:#F9F9F9;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Segoe UI',Calibri,Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.55;}
+  body{font-family:'Segoe UI',Calibri,Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.6;}
   a{color:var(--red);text-decoration:none;}
   a:hover{text-decoration:underline;}
   .top-bar{height:5px;background:var(--red);}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid var(--lgray);position:sticky;top:0;background:#fff;z-index:100;}
+
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid var(--lgray);}
   .logo{display:flex;align-items:center;gap:14px;}
-  .logo-eye{width:56px;height:36px;flex-shrink:0;}
-  .logo-word{display:flex;flex-direction:column;line-height:1;}
-  .logo-wordmark{font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:1;color:#000;letter-spacing:-0.5px;}
+  .logo-wordmark{font-family:Georgia,'Times New Roman',serif;font-size:30px;color:#000;letter-spacing:-0.5px;}
   .logo-wordmark b{font-weight:900;letter-spacing:-1px;}
-  .logo-wordmark span{font-weight:500;}
-  .logo-sub{font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gray);text-transform:uppercase;margin-top:7px;}
-  .nav-links{display:flex;gap:28px;align-items:center;}
-  .nav-link{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dark2);}
-  .nav-link.active{color:var(--red);}
-  .nav-link:hover{color:var(--red);text-decoration:none;}
+  .logo-sub{font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gray);text-transform:uppercase;margin-top:5px;}
   .nav-badge{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;}
 
-  .hero{padding:70px 60px 50px;border-bottom:1px solid var(--lgray);}
+  .hero{padding:60px 60px 36px;border-bottom:1px solid var(--lgray);max-width:920px;margin:0 auto;}
   .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:18px;}
-  .hero-title{font-size:clamp(34px,4.4vw,56px);font-weight:700;line-height:1.08;color:var(--dark);margin-bottom:10px;}
-  .hero-sub{font-size:clamp(18px,2.2vw,26px);font-style:italic;font-weight:700;color:var(--red);margin-bottom:28px;}
-  .hero-divider{width:60px;height:3px;background:var(--red);margin-bottom:24px;}
-  .hero-meta{display:flex;flex-wrap:wrap;gap:22px;color:var(--dark2);font-size:14px;}
-  .hero-meta-line{display:flex;align-items:center;gap:10px;}
-  .hero-meta-dot{width:8px;height:8px;border-radius:50%;background:var(--red);}
+  .hero-title{font-size:clamp(32px,4vw,52px);font-weight:800;line-height:1.08;color:var(--dark);margin-bottom:16px;}
+  .hero-sub{font-size:clamp(18px,2vw,22px);font-style:italic;font-weight:600;color:var(--red);margin-bottom:24px;}
+  .hero-divider{width:60px;height:3px;background:var(--red);margin-bottom:20px;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:24px;color:var(--gray);font-size:13px;}
+  .hero-meta-line{display:flex;align-items:center;gap:8px;}
+  .hero-meta-dot{width:6px;height:6px;border-radius:50%;background:var(--red);}
 
-  .editorial{display:grid;grid-template-columns:280px 1fr;gap:42px;padding:60px 60px;border-bottom:1px solid var(--lgray);background:#fff;align-items:start;}
-  .editorial-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-top:4px solid var(--red);box-shadow:0 6px 28px rgba(0,0,0,.12);display:block;}
-  .editorial-photo-wrap{position:relative;}
-  .editorial-photo-cap{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gray);text-transform:uppercase;margin-top:14px;line-height:1.5;}
-  .editorial-photo-cap b{color:var(--dark);}
-  .editorial-text{padding-top:6px;}
-  .editorial-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
-  .editorial-title{font-size:clamp(22px,2.4vw,30px);font-weight:700;color:var(--dark);line-height:1.22;margin-bottom:20px;}
-  .editorial-body{font-size:16px;color:var(--dark2);line-height:1.72;}
-  .editorial-body p+p{margin-top:14px;}
-  .editorial-body strong{color:var(--dark);}
-  .editorial-body em{color:var(--red);font-style:normal;font-weight:600;}
-  .editorial-sign{display:flex;align-items:center;gap:14px;margin-top:26px;padding-top:18px;border-top:1px solid var(--lgray);}
-  .editorial-sign-name{font-size:15px;font-weight:700;color:var(--dark);}
-  .editorial-sign-role{font-size:13px;color:var(--gray);font-style:italic;}
-  @media(max-width:900px){.editorial{grid-template-columns:1fr;gap:24px;padding:40px 24px;}.editorial-photo{max-width:280px;}}
-
-  /* COURSE BANNER */
-  .course-banner{background:var(--dark);color:#fff;padding:44px 60px;border-top:5px solid var(--red);}
-  .cb-eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
-  .cb-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
-  .cb-title{font-size:clamp(26px,3vw,40px);font-weight:700;line-height:1.1;margin-bottom:10px;}
-  .cb-title span{color:var(--red);font-style:italic;}
-  .cb-sub{font-size:16px;color:rgba(255,255,255,.78);margin-bottom:18px;line-height:1.6;}
-  .cb-meta{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:13px;color:rgba(255,255,255,.72);}
-  .cb-meta b{color:#fff;font-weight:700;}
-  .cb-cta{display:flex;flex-direction:column;align-items:center;gap:10px;}
-  .cb-btn{display:inline-block;background:var(--red);color:#fff;padding:18px 40px;font-size:15px;font-weight:700;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;border-radius:2px;}
-  .cb-btn:hover{opacity:.9;text-decoration:none;}
-  .cb-speakers{font-size:12px;color:rgba(255,255,255,.6);}
-  @media(max-width:900px){.course-banner{padding:32px 24px;}.cb-grid{grid-template-columns:1fr;gap:22px;}}
-
-  .toc{background:var(--bg-row);padding:32px 60px;border-top:3px solid var(--red);}
-  .toc-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:16px;}
-  .toc ol{list-style:none;counter-reset:toc;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 28px;}
-  .toc ol li{counter-increment:toc;font-size:15px;color:var(--dark);padding-left:34px;position:relative;line-height:1.4;}
-  .toc ol li:before{content:counter(toc,decimal-leading-zero);position:absolute;left:0;top:0;font-size:13px;font-weight:700;color:var(--red);letter-spacing:1px;}
-
-  article{padding:70px 60px;border-bottom:1px solid var(--lgray);}
-  article:nth-of-type(even){background:var(--bg-veb);}
-  .story-header{display:flex;align-items:baseline;gap:20px;margin-bottom:14px;}
-  .story-num{font-size:54px;font-weight:900;font-style:italic;color:var(--red);line-height:1;min-width:72px;}
-  .story-eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:8px;}
-  .story-title{font-size:clamp(24px,2.8vw,36px);font-weight:700;color:var(--dark);line-height:1.18;margin-bottom:12px;}
-  .story-meta{font-size:13px;color:var(--gray);margin-bottom:6px;}
-  .story-meta strong{color:var(--dark2);font-weight:600;}
-  .story-link{font-size:13px;margin-bottom:28px;display:inline-block;}
-  .block{margin-bottom:28px;}
-  .block-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;border-bottom:1px solid var(--lgray);padding-bottom:8px;margin-bottom:14px;}
-  .block-body{font-size:15.5px;color:var(--dark2);line-height:1.72;}
-  .block-body p+p{margin-top:12px;}
+  .content{max-width:920px;margin:0 auto;padding:50px 60px;}
+  .block{margin-bottom:36px;}
+  .block-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;border-bottom:1px solid var(--lgray);padding-bottom:8px;margin-bottom:16px;}
+  .block-body{font-size:16.5px;color:var(--dark2);line-height:1.78;}
+  .block-body p+p{margin-top:14px;}
   .block-body strong{color:var(--dark);}
-  .pullquote{border-left:3px solid var(--red);background:#fff;padding:18px 24px;margin:14px 0;font-size:16px;color:var(--dark);font-style:italic;font-weight:500;}
-  .react{background:var(--dark);color:#fff;padding:30px 34px;border-top:3px solid var(--red);margin-top:6px;}
-  .react-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;padding-bottom:10px;margin-bottom:16px;border-bottom:1px solid rgba(255,255,255,.14);}
+  .block-body em{color:var(--red);font-style:normal;font-weight:600;}
+
+  ol.steps{counter-reset:s;list-style:none;padding-top:6px;}
+  ol.steps li{counter-increment:s;padding-left:42px;position:relative;margin-bottom:14px;font-size:16px;color:var(--dark2);line-height:1.7;}
+  ol.steps li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:0;font-size:14px;font-weight:800;color:var(--red);letter-spacing:1px;}
+  ol.steps li strong{color:var(--dark);}
+
+  .pullquote{border-left:4px solid var(--red);background:var(--bg-veb);padding:24px 28px;margin:30px 0;font-size:18px;color:var(--dark);font-style:italic;font-weight:600;line-height:1.5;}
+
+  .react{background:var(--dark);color:#fff;padding:36px 40px;border-top:4px solid var(--red);margin-top:10px;}
+  .react-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,.14);}
+  .react-title{font-size:22px;font-weight:700;color:#fff;margin-bottom:14px;}
   .react-body{font-size:15.5px;color:rgba(255,255,255,.84);line-height:1.74;}
   .react-body p+p{margin-top:12px;}
   .react-body strong{color:#fff;}
-  .react-body em{color:#fff;font-style:normal;font-weight:700;background:var(--red);padding:1px 7px;border-radius:3px;}
 
-  footer{background:var(--dark);color:rgba(255,255,255,.55);padding:48px 60px;font-size:13px;}
+  footer{background:var(--dark);color:rgba(255,255,255,.55);padding:36px 60px;font-size:13px;}
   footer strong{color:#fff;}
-  footer .foot-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:20px;margin-bottom:20px;}
-  footer .foot-sources{line-height:1.9;}
-  @media(max-width:900px){nav,.hero,.toc,article,footer{padding-left:24px;padding-right:24px;}.toc ol{grid-template-columns:1fr;}.story-num{font-size:40px;min-width:52px;}.react{padding:24px 22px;}.nav-links{gap:16px;}}
+  footer .foot-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:16px;margin-bottom:16px;}
+  footer a{color:rgba(255,255,255,.7);}
+  footer .foot-sources{line-height:1.85;}
+
+  @media(max-width:900px){nav,.hero,.content,footer{padding-left:24px;padding-right:24px;}}
 </style>
 </head>
 <body>
 
 <div class="top-bar"></div>
 
-<nav>
-  <a href="/" class="logo" aria-label="Инсайты — консалтинговое агентство">
-    <svg class="logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<nav style="position:sticky;top:0;background:#fff;z-index:100;">
+  <a href="/" class="logo" aria-label="Инсайты — консалтинговое агентство" style="text-decoration:none;">
+    <svg viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:56px;height:36px;flex-shrink:0;">
       <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/>
       <circle cx="28" cy="18" r="11" fill="#C0392B"/>
       <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
       <circle cx="31" cy="15" r="1.6" fill="#fff"/>
     </svg>
-    <div class="logo-word">
-      <div class="logo-wordmark"><b>ИН</b><span>сайты</span></div>
+    <div>
+      <div class="logo-wordmark"><b>ИН</b><span style="font-weight:500;">сайты</span></div>
       <div class="logo-sub">Консалтинговое агентство</div>
     </div>
   </a>
-  <div class="nav-links">
-    <a href="/" class="nav-link active">Сегодня</a>
-    <a href="/archive/" class="nav-link">Архив</a>
-    <div class="nav-badge">Ежедневный дайджест</div>
+  <div style="display:flex;gap:28px;align-items:center;">
+    <a href="/" style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);text-decoration:none;">Сегодня</a>
+    <a href="/archive/" style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dark2);text-decoration:none;">Архив</a>
+    <div class="nav-badge">Новость дня · 17 июня</div>
   </div>
 </nav>
 
 <section class="hero">
-  <div class="hero-eyebrow">Выпуск 006 · среда</div>
-  <h1 class="hero-title">Что случилось в мировом маркетинге</h1>
-  <div class="hero-sub">и как на каждую новость реагировать клинике</div>
+  <div class="hero-eyebrow">Мировой маркетинг · Реклама</div>
+  <h1 class="hero-title">Google убил лид-форму. Заменил на чат-бота прямо внутри рекламы.</h1>
+  <p class="hero-sub">Объявление теперь — не баннер с формой. Это разговор с агентом до клика.</p>
   <div class="hero-divider"></div>
   <div class="hero-meta">
-    <div class="hero-meta-line"><span class="hero-meta-dot"></span><span>Среда, 27 мая 2026</span></div>
-    <div class="hero-meta-line"><span class="hero-meta-dot"></span><span>5 историй · время чтения ~13 минут</span></div>
-    <div class="hero-meta-line"><span class="hero-meta-dot"></span><span>Источники: eMarketer, Ad Age, Digiday, The Drum, Epsilon, AdExchanger, отраслевая аналитика 2026</span></div>
+    <div class="hero-meta-line"><span class="hero-meta-dot"></span>Источник: Google Marketing Live 2026</div>
+    <div class="hero-meta-line"><span class="hero-meta-dot"></span>Дата события: 20 мая 2026</div>
+    <div class="hero-meta-line"><span class="hero-meta-dot"></span>~ 2 минуты чтения</div>
   </div>
 </section>
 
-<section class="editorial">
-  <div class="editorial-photo-wrap">
-    <img class="editorial-photo" src="./olga-zibert.jpg" alt="Ольга Зиберт — основатель клуба «Инсайты»">
-    <div class="editorial-photo-cap"><b>Ольга Зиберт</b><br>Основатель «Инсайты» · Стратегический маркетинг для клиник</div>
-  </div>
-  <div class="editorial-text">
-    <div class="editorial-eyebrow">Слово редактора</div>
-    <h2 class="editorial-title">Маркетинг разворачивается от «привести» к «удержать и быть рекомендованным»</h2>
-    <div class="editorial-body">
-      <p>Если читать пять новостей этого выпуска вместе, виден один большой разворот. Креатор перестал быть «блогером для охвата» и стал полноценным медиаканалом. Программы лояльности растут двузначными темпами. Соцвидео впервые обгоняет CTV — потому что там живут отношения, а не разовый контакт. И даже ритейл-медиа наконец учится честно мерить, что реально приносит деньги.</p>
-      <p>Всё это — про одно: <em>стоимость привлечения дорожает, и выигрывает тот, кто умеет удерживать и превращать клиентов в адвокатов.</em> Это ровно то, что я называю Lovemark и лидгеном рекомендаций. Бренд, отношения, первичные данные пациента и живой контент от реальных людей — вот что в 2026 году отделяет растущие клиники от тех, кто бесконечно «докупает трафик».</p>
-      <p>Поэтому в каждой новости — блок <strong>«как реагировать»</strong>: без воды, с конкретным шагом для клиники. А если хотите собрать из этого систему — добро пожаловать на наш курс (баннер ниже).</p>
-      <div class="editorial-sign">
-        <div>
-          <div class="editorial-sign-name">Ольга Зиберт</div>
-          <div class="editorial-sign-role">Основатель консалтингового агентства и клуба «Инсайты» · автор Lovemark-стратегии для клиник · 10+ лет в медицинском маркетинге</div>
-        </div>
-      </div>
+<section class="content">
+
+  <div class="block">
+    <div class="block-label">Что произошло</div>
+    <div class="block-body">
+      <p>На <strong>Google Marketing Live 2026</strong> Google представил формат <strong>Business Agent for Leads</strong> — рекламу, в которой статичная лид-форма заменена <strong>чат-агентом на базе Gemini</strong> прямо внутри объявления.</p>
+      <p>Агент обучен на сайте рекламодателя. Он <strong>отвечает на вопросы пользователя ещё до клика</strong> по объявлению, а не отправляет его на лендинг. Открытый бета-режим запущен в США — пилот идёт в образовании, автодилерах и недвижимости. Медицина — следующая на очереди.</p>
+      <p>И это — не отдельная фича. Это <em>часть полной перестройки рекламного стека Google вокруг Gemini.</em> Параллельно запущены Conversational Discovery Ads, Highlighted Answers и AI-Powered Shopping Ads. Реклама как формат меняет суть: от баннера и формы — к диалогу.</p>
     </div>
   </div>
+
+  <div class="block">
+    <div class="block-label">Почему это важно для клиник</div>
+    <div class="block-body">
+      <p>Лид-форма как самостоятельная единица <strong>уходит из рекламы</strong>. Будущее лидгена — не «оставьте телефон», а <strong>«поговорите с агентом клиники и поймите, подходим ли мы вам»</strong>.</p>
+      <p>Это меняет всю логику воронки. Сегодня вы платите за клик и лид. Завтра вы платите за <strong>качество разговора</strong> ещё до клика — потому что агент уже отсеял нерелевантных пациентов и привёл к вам мотивированного.</p>
+      <p>Яндекс будет копировать в течение 6–12 месяцев. Кто подготовится первым — тот получит дешевле и лучше отработанных пациентов.</p>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    Реклама в 2026 — это не баннер и не форма. Это первое слово вашей клиники, сказанное роботу-агенту от лица пациента. И от качества этого разговора зависит, какой пациент к вам дойдёт.
+  </div>
+
+  <div class="block">
+    <div class="block-label">Что делать клинике уже сейчас</div>
+    <ol class="steps">
+      <li><strong>Превратите страницу услуг в чёткий FAQ.</strong> Будущий агент Gemini будет учиться на тексте вашего сайта. Если на сайте написано «доступные цены, опытные врачи» — агент это и повторит. Если вы дадите конкретные ответы на вопросы — он ответит конкретно.</li>
+      <li><strong>Соберите «голос клиники»</strong> — 50–100 типовых вопросов пациента и эталонные ответы от ваших координаторов и врачей. Это будущий контент-завод для AI-агента. Без него реклама-разговор не заработает.</li>
+      <li><strong>Запустите Telegram/сайт-бота уже сейчас</strong> с этими сценариями. Отработайте, какие вопросы конвертируют в запись, а какие — в отказ. Это даст вам данные, к которым подключится Google-агент через год.</li>
+      <li><strong>Перестройте мышление о воронке.</strong> Не «как привести лид», а «как выглядит идеальный разговор с пациентом до первой записи». Это и есть новая рекламная креативная задача.</li>
+    </ol>
+  </div>
+
+  <div class="react">
+    <div class="react-label">Реакция Инсайты</div>
+    <div class="react-title">Кто построит «голос клиники» в 2026 — тот выиграет рекламу 2027.</div>
+    <div class="react-body">
+      <p>Мы в Инсайты считаем, что <strong>главное конкурентное преимущество клиники следующего года — не бюджет на трафик, а качество разговора с пациентом до записи.</strong></p>
+      <p>Это меняет правила всем — от Яндекса до СММ-агентств. Мы уже встраиваем работу с AI-агентами в новый поток курса «AI Бренд-Маркетинг в формате Lovemark» и в проекты Cosmarketing × Instformation. Кто хочет быть готовым — приходите.</p>
+    </div>
+  </div>
+
 </section>
-
-<!-- COURSE BANNER -->
-<section class="course-banner">
-  <div class="cb-eyebrow">Реклама · Центр Результативного Управления</div>
-  <div class="cb-grid">
-    <div>
-      <div class="cb-title">AI Бренд-Маркетинг <span>в формате Lovemark</span></div>
-      <div class="cb-sub">Курс для собственников и маркетологов клиник: бренд-стратегия, дерево целей, отстройка через Reason to Believe и Lovemark, лидген рекомендаций и ИИ-инструменты — от стратегии до внедрения.</div>
-      <div class="cb-meta">
-        <span><b>28 апреля — 11 июня 2026</b> · 12:00 МСК</span>
-        <span><b>22 занятия</b> · вт и чт</span>
-        <span><b>7 уроков</b> + 8 ИИ-инструкций + 7 практик</span>
-      </div>
-    </div>
-    <div class="cb-cta">
-      <a class="cb-btn" href="https://ai-brand-marketing.vercel.app/" target="_blank">Записаться на курс</a>
-      <div class="cb-speakers">Спикеры: Ольга Зиберт · Юлия Ломова</div>
-    </div>
-  </div>
-</section>
-
-<section class="toc">
-  <div class="toc-label">В этом выпуске</div>
-  <ol>
-    <li>Ритейл-медиа растёт до $312 млрд и переходит на честное измерение инкрементальности</li>
-    <li>Креатор-маркетинг стал полноценным медиаканалом: эра always-on creator-программ</li>
-    <li>Соцвидео впервые обгоняет CTV по росту: awareness и performance сливаются в один контур</li>
-    <li>Instagram запускает партнёрку без комиссии: коммерция встроена прямо в контент</li>
-    <li>Лояльность и first-party data — главный ответ на дорожающее привлечение</li>
-  </ol>
-</section>
-
-<!-- STORY 1 -->
-<article>
-  <div class="story-header">
-    <div class="story-num">01</div>
-    <div>
-      <div class="story-eyebrow">Retail media · Измерение · Инкрементальность</div>
-      <h2 class="story-title">Ритейл-медиа растёт до $312 млрд и переходит на честное измерение инкрементальности</h2>
-      <div class="story-meta"><strong>Источник:</strong> eMarketer, Epsilon, Albertsons Media Collective, май 2026</div>
-      <a class="story-link" href="https://www.emarketer.com/content/commerce-media-predictions-2026-media-service-experiential-retail-ai-driven-measurement" target="_blank">emarketer.com →</a>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Краткий пересказ</div>
-    <div class="block-body">
-      <p>Ритейл-медиа — самый быстрорастущий канал digital: с $184 млрд в 2025 до прогнозных $312 млрд к 2030. Главный сдвиг 2026 года — измерение: 86% покупателей commerce-media называют усиление аналитики и атрибуции критическим приоритетом. Индустрия уходит от «сети оценивают сами себя» к независимому измерению инкрементальности (holdout-группы, matched-market тесты). Albertsons запустил измерение инкрементальности даже для рекламы в офлайн-залах.</p>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Полный перевод</div>
-    <div class="block-body">
-      <p>Реклама «на полке» — там, где человек уже готов покупать — растёт быстрее всего, и форматы вышли за пределы онлайн-маркетплейсов: цифровые экраны и аудио в торговых залах, connected TV, видео. 40% медиабайеров используют ритейл-медиа на всём пути покупателя.</p>
-      <p>Но взрослея, рынок упёрся в вопрос доверия к цифрам. Раньше площадка сама и продавала рекламу, и отчитывалась о её эффективности — конфликт интересов. Теперь стандартом становится инкрементальность: сравнение групп, которые видели и не видели рекламу, чтобы измерить реальный прирост продаж, а не приписанные клики.</p>
-      <p>Это часть более широкого тренда: атрибуция last-click и «нарисованные» отчёты теряют доверие. Бизнес хочет знать, какой рубль реально принёс выручку, а не красиво лёг в дашборд.</p>
-      <div class="pullquote">Зрелость канала измеряется не объёмом бюджета, а честностью его измерения.</div>
-    </div>
-  </div>
-  <div class="react">
-    <div class="react-label">Как реагировать</div>
-    <div class="react-body">
-      <p>Перестать верить «нарисованным» отчётам подрядчиков и требовать измерения реального прироста. <em>Простой аналог инкрементальности для клиники:</em> на тесте отключить канал на 2 недели или запустить в новом районе и сравнить поток первички — так видно, что канал реально добавляет, а что приписывает себе чужих пациентов.</p>
-      <p>И смотреть на звонки и записи, а не на клики: считать стоимость записанного пациента по каналу, а не стоимость лида «на бумаге».</p>
-    </div>
-  </div>
-</article>
-
-<!-- STORY 2 -->
-<article>
-  <div class="story-header">
-    <div class="story-num">02</div>
-    <div>
-      <div class="story-eyebrow">Creator economy · Медиаканал · Always-on</div>
-      <h2 class="story-title">Креатор-маркетинг стал полноценным медиаканалом: эра always-on creator-программ</h2>
-      <div class="story-meta"><strong>Источник:</strong> New Engen, eMarketer, отраслевые трейд-отчёты, май 2026</div>
-      <a class="story-link" href="https://newengen.com/insights/influencer-marketing-trends-may-2026/" target="_blank">newengen.com →</a>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Краткий пересказ</div>
-    <div class="block-body">
-      <p>Впервые отраслевые трейд-органы говорят о creator-led media так же серьёзно, как о paid social, programmatic и CTV. Тренд мая 2026 — переход от разовых интеграций к always-on creator-программам. Target за первую неделю мая запустил сразу две: Club Target (геймифицированная программа для нано-креаторов с еженедельными челленджами) и Target Ambassadors (по приглашению, через LTK, с высокими комиссиями и глубоким доступом к бренду).</p>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Полный перевод</div>
-    <div class="block-body">
-      <p>Креатор перестал быть «разовой рекламой у блогера» и стал постоянным медиаканалом со своей экономикой. Бренды строят не отдельные интеграции, а программы: пул креаторов работает на бренд постоянно, по понятным правилам и вознаграждениям.</p>
-      <p>Логика сдвига — от «закупки охвата» к «выращиванию своих». Постоянные креаторы дают доверие, регулярность и поток UGC, который дешевле и убедительнее любой студийной рекламы. Нано- и микро-креаторы с узкой, но горячей аудиторией обходят дорогих звёзд по эффективности.</p>
-      <p>Это прямое продолжение разворота к доверию: аудитория верит лицам и реальному опыту, а не отполированному баннеру.</p>
-    </div>
-  </div>
-  <div class="react">
-    <div class="react-label">Как реагировать</div>
-    <div class="react-body">
-      <p>Запустить свою программу «медиа-врачей»: <em>2–3 врача клиники как постоянные креаторы</em> с регулярным контентом (разборы, ответы на вопросы пациентов, кейсы) — это актив, привязанный к клинике, в отличие от внешнего блогера.</p>
-      <p>Добавить пул микро-креаторов и пациентов-амбассадоров: простая механика вознаграждения за рекомендацию и UGC с эмоциональных точек (например, завершение лечения). Не разовая реклама — постоянная программа с целевыми показателями.</p>
-    </div>
-  </div>
-</article>
-
-<!-- STORY 3 -->
-<article>
-  <div class="story-header">
-    <div class="story-num">03</div>
-    <div>
-      <div class="story-eyebrow">Соцвидео · CTV · Бренд + перформанс</div>
-      <h2 class="story-title">Соцвидео впервые обгоняет CTV по росту: awareness и performance сливаются в один контур</h2>
-      <div class="story-meta"><strong>Источник:</strong> Digiday, AdExchanger, май 2026</div>
-      <a class="story-link" href="https://digiday.com/media-buying/social-video-ad-spending-is-set-to-outpace-ctv-in-growth-rate-this-year/" target="_blank">digiday.com →</a>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Краткий пересказ</div>
-    <div class="block-body">
-      <p>В 2026-м расходы на соцвидео (Instagram, YouTube, Reddit) растут на 13% — впервые быстрее, чем CTV (+11%). Meta и YouTube объединяют узнаваемость и перформанс в один контур: один ролик работает и на охват, и на конверсию. Параллельно Meta заходит в CTV-рекламу, а Instagram строит длинный контент для ТВ — подкасты, лонг-стримы, мини-драмы.</p>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Полный перевод</div>
-    <div class="block-body">
-      <p>Граница между «брендовой» и «продающей» рекламой размывается. Раньше охват и конверсию вели отдельно; теперь платформы дают форматы, где один ролик одновременно строит знание бренда и приводит заявку. Соцвидео выигрывает у CTV в темпах, потому что оно интерактивное и ближе к действию.</p>
-      <p>Для рекламодателя это упрощение и риск одновременно: проще запускать, но легко скатиться в «только перформанс» и забыть про бренд. Победители 2026 года балансируют: вкладывают в узнаваемость и доверие, а не только в клики последней мили.</p>
-    </div>
-  </div>
-  <div class="react">
-    <div class="react-label">Как реагировать</div>
-    <div class="react-body">
-      <p>Делать вертикальное видео, которое одновременно греет и ведёт к записи: <em>врач отвечает на вопрос пациента → в конце мягкий призыв на консультацию.</em> Один формат — две задачи.</p>
-      <p>Не уходить в «только перформанс»: держать долю брендового контента (лица врачей, ценности, кейсы). Дешёвые заявки без бренда быстро дорожают — доверие удешевляет всю воронку.</p>
-    </div>
-  </div>
-</article>
-
-<!-- STORY 4 -->
-<article>
-  <div class="story-header">
-    <div class="story-num">04</div>
-    <div>
-      <div class="story-eyebrow">Social commerce · Instagram · Партнёрка</div>
-      <h2 class="story-title">Instagram запускает партнёрку без комиссии: коммерция встроена прямо в контент</h2>
-      <div class="story-meta"><strong>Источник:</strong> eMarketer, AdExchanger, апрель–май 2026</div>
-      <a class="story-link" href="https://www.emarketer.com/content/4-retail-predictions-2026-streaming-marketplaces-value-gaps-tiktok-s-growing-legitimacy" target="_blank">emarketer.com →</a>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Краткий пересказ</div>
-    <div class="block-body">
-      <p>Instagram расширил нативную партнёрскую механику: креаторы могут тегать до 30 товаров прямо в Reels из верифицированного каталога Meta — со страницы публикации, без посредников. И ключевое: Meta не берёт комиссию. Коммерция переезжает внутрь контента, а инфраструктура продаж становится частью платформы.</p>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Полный перевод</div>
-    <div class="block-body">
-      <p>Платформы делают путь «увидел → купил» бесшовным: не нужно уходить на сайт, покупка живёт в самом ролике. Отказ от комиссии — стратегический ход: Meta растит объём creator-commerce, чтобы конкурировать с TikTok Shop, и стимулирует креаторов продавать именно у себя.</p>
-      <p>Для услуг (а клиника — это услуга) прямой «товарной витрины» нет, но логика та же: чем короче путь от контента к целевому действию (записи), тем выше конверсия. Выигрывает тот, у кого запись встроена в точку интереса, а не спрятана на сайте.</p>
-    </div>
-  </div>
-  <div class="react">
-    <div class="react-label">Как реагировать</div>
-    <div class="react-body">
-      <p>Сократить путь «интерес → запись» до минимума: <em>кнопка записи/бот прямо в профиле и под роликом</em>, а не «перейдите на сайт и найдите форму». Каждый лишний шаг теряет пациентов.</p>
-      <p>Встроить оффер в сам контент: в ролике с кейсом — сразу понятный следующий шаг (бесплатная консультация, бот с подарком). Контент и точка конверсии должны жить в одном месте.</p>
-    </div>
-  </div>
-</article>
-
-<!-- STORY 5 -->
-<article>
-  <div class="story-header">
-    <div class="story-num">05</div>
-    <div>
-      <div class="story-eyebrow">Лояльность · First-party data · Удержание</div>
-      <h2 class="story-title">Лояльность и first-party data — главный ответ на дорожающее привлечение</h2>
-      <div class="story-meta"><strong>Источник:</strong> Epsilon 2026 Trends, eMarketer, отраслевые отчёты по лояльности, май 2026</div>
-      <a class="story-link" href="https://www.epsilon.com/emea/insights/blog/2026-trends-report-snapshot-marketing-growth" target="_blank">epsilon.com →</a>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Краткий пересказ</div>
-    <div class="block-body">
-      <p>На фоне дорожающего привлечения бренды массово вкладываются в удержание. Рынок программ лояльности растёт с $16,4 млрд (2026) до $32,5 млрд к 2031, CAGR ~14,6%. Программы на первичных данных дают +20–30% к повторным покупкам. 50% программ планируют внедрить ИИ-персонализацию, у ранних адоптеров — отдача 5,2× на вложения в лояльность.</p>
-    </div>
-  </div>
-  <div class="block">
-    <div class="block-label">Полный перевод</div>
-    <div class="block-body">
-      <p>Логика проста: привлечь нового клиента дорого и всё дороже, а удержать существующего — в разы дешевле. Поэтому фокус смещается с разовой покупки на пожизненную ценность (LTV) и на собственные, первичные данные о клиенте — самый ценный актив в эпоху приватности.</p>
-      <p>First-party data, собранные напрямую (а не куплены и не «подсмотрены» трекерами), позволяют персонализировать общение, поднимать повторные визиты и точно сегментировать. ИИ делает это в реальном времени — «сегмент из одного человека».</p>
-      <p>Это прямое продолжение Lovemark-логики: отношения и удержание дают рекомендации, повторные продажи и снижают зависимость от платного трафика.</p>
-    </div>
-  </div>
-  <div class="react">
-    <div class="react-label">Как реагировать</div>
-    <div class="react-body">
-      <p>Строить собственную базу пациентов и работать с ней как с активом: <em>CRM-маркетинг, напоминания о профилактике, реактивация «спящих», программа рекомендаций.</em> Вернуть пациента кратно дешевле, чем привести нового.</p>
-      <p>Собирать first-party data честно — через квизы, расчёт стоимости, онлайн-сервис — и персонализировать общение. Это и есть Lovemark и лидген рекомендаций в действии, а не «докупка трафика».</p>
-    </div>
-  </div>
-</article>
 
 <footer>
   <div class="foot-top">
-    <div><strong>Инсайты</strong> — ежедневный дайджест о маркетинге для клиник и стоматологий</div>
-    <div>Выпуск 006 · 27 мая 2026</div>
+    <div><strong>ИНСАЙТЫ</strong> · консалтинговое агентство</div>
+    <div>Новость дня · 17 июня 2026</div>
   </div>
   <div class="foot-sources">
-    <strong>Источники выпуска:</strong><br>
-    eMarketer · Ad Age · Digiday · The Drum · AdExchanger · Epsilon 2026 Trends · New Engen · Albertsons Media Collective · отраслевая аналитика по ритейл-медиа, creator-economy и лояльности 2026<br>
-    Подборка и редакторская адаптация: ежедневный дайджест, выпуск 006. Все факты и формулировки — авторская редакция, не заменяет первоисточники. Реклама курса размещена на правах партнёрского материала. Архив: <a href="/archive/">все выпуски</a>.
+    <strong>Источники:</strong><br>
+    · <a href="https://www.techwyse.com/news/industry-news/google-marketing-live-2026-gemini-ad-stack" target="_blank">Google Marketing Live 2026: Gemini Eats the Ad Stack — TechWyse</a><br>
+    · <a href="https://ivristech.com/google-business-agent-for-leads-b2b/" target="_blank">Google Business Agent for Leads: Gemini Chat in Search Ads — Ivristech</a><br>
+    · <a href="https://www.cmswire.com/digital-marketing/google-marketing-live-how-google-is-building-an-ai-native-marketing-ecosystem/" target="_blank">Google Marketing Live 2026: Gemini Takes the Wheel — CMSWire</a><br>
+    · <a href="https://searchengineland.com/google-tests-new-conversational-ad-formats-in-ai-mode-and-search-478115" target="_blank">Google tests new conversational ad formats — Search Engine Land</a><br>
+    · <a href="https://blog.google/products/ads-commerce/google-marketing-live-2026-collection/" target="_blank">Google Marketing Live 2026: News and announcements — Google Blog</a>
   </div>
 </footer>
 
