@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Новость дня · Google убил лид-форму · 17 июня 2026</title>
+<style>
+  :root{
+    --red:#C0392B;--dark:#2A2A2A;--dark2:#4A4A4A;--gray:#9A9A9A;
+    --lgray:#E8E8E8;--bg-row:#F3F3F3;--bg-veb:#F9F9F9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Calibri,Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.6;}
+  a{color:var(--red);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .top-bar{height:5px;background:var(--red);}
+
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid var(--lgray);}
+  .logo{display:flex;align-items:center;gap:14px;}
+  .logo-wordmark{font-family:Georgia,'Times New Roman',serif;font-size:30px;color:#000;letter-spacing:-0.5px;}
+  .logo-wordmark b{font-weight:900;letter-spacing:-1px;}
+  .logo-sub{font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gray);text-transform:uppercase;margin-top:5px;}
+  .nav-badge{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;}
+
+  .hero{padding:60px 60px 36px;border-bottom:1px solid var(--lgray);max-width:920px;margin:0 auto;}
+  .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:18px;}
+  .hero-title{font-size:clamp(32px,4vw,52px);font-weight:800;line-height:1.08;color:var(--dark);margin-bottom:16px;}
+  .hero-sub{font-size:clamp(18px,2vw,22px);font-style:italic;font-weight:600;color:var(--red);margin-bottom:24px;}
+  .hero-divider{width:60px;height:3px;background:var(--red);margin-bottom:20px;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:24px;color:var(--gray);font-size:13px;}
+  .hero-meta-line{display:flex;align-items:center;gap:8px;}
+  .hero-meta-dot{width:6px;height:6px;border-radius:50%;background:var(--red);}
+
+  .content{max-width:920px;margin:0 auto;padding:50px 60px;}
+  .block{margin-bottom:36px;}
+  .block-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;border-bottom:1px solid var(--lgray);padding-bottom:8px;margin-bottom:16px;}
+  .block-body{font-size:16.5px;color:var(--dark2);line-height:1.78;}
+  .block-body p+p{margin-top:14px;}
+  .block-body strong{color:var(--dark);}
+  .block-body em{color:var(--red);font-style:normal;font-weight:600;}
+
+  ol.steps{counter-reset:s;list-style:none;padding-top:6px;}
+  ol.steps li{counter-increment:s;padding-left:42px;position:relative;margin-bottom:14px;font-size:16px;color:var(--dark2);line-height:1.7;}
+  ol.steps li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:0;font-size:14px;font-weight:800;color:var(--red);letter-spacing:1px;}
+  ol.steps li strong{color:var(--dark);}
+
+  .pullquote{border-left:4px solid var(--red);background:var(--bg-veb);padding:24px 28px;margin:30px 0;font-size:18px;color:var(--dark);font-style:italic;font-weight:600;line-height:1.5;}
+
+  .react{background:var(--dark);color:#fff;padding:36px 40px;border-top:4px solid var(--red);margin-top:10px;}
+  .react-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,.14);}
+  .react-title{font-size:22px;font-weight:700;color:#fff;margin-bottom:14px;}
+  .react-body{font-size:15.5px;color:rgba(255,255,255,.84);line-height:1.74;}
+  .react-body p+p{margin-top:12px;}
+  .react-body strong{color:#fff;}
+
+  footer{background:var(--dark);color:rgba(255,255,255,.55);padding:36px 60px;font-size:13px;}
+  footer strong{color:#fff;}
+  footer .foot-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:16px;margin-bottom:16px;}
+  footer a{color:rgba(255,255,255,.7);}
+  footer .foot-sources{line-height:1.85;}
+
+  @media(max-width:900px){nav,.hero,.content,footer{padding-left:24px;padding-right:24px;}}
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<nav>
+  <div class="logo">
+    <div>
+      <div class="logo-wordmark"><b>ИН</b>сайты</div>
+      <div class="logo-sub">консалтинговое агентство</div>
+    </div>
+  </div>
+  <div class="nav-badge">Новость дня · 17 июня 2026</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Мировой маркетинг · Реклама</div>
+  <h1 class="hero-title">Google убил лид-форму. Заменил на чат-бота прямо внутри рекламы.</h1>
+  <p class="hero-sub">Объявление теперь — не баннер с формой. Это разговор с агентом до клика.</p>
+  <div class="hero-divider"></div>
+  <div class="hero-meta">
+    <div class="hero-meta-line"><span class="hero-meta-dot"></span>Источник: Google Marketing Live 2026</div>
+    <div class="hero-meta-line"><span class="hero-meta-dot"></span>Дата события: 20 мая 2026</div>
+    <div class="hero-meta-line"><span class="hero-meta-dot"></span>~ 2 минуты чтения</div>
+  </div>
+</section>
+
+<section class="content">
+
+  <div class="block">
+    <div class="block-label">Что произошло</div>
+    <div class="block-body">
+      <p>На <strong>Google Marketing Live 2026</strong> Google представил формат <strong>Business Agent for Leads</strong> — рекламу, в которой статичная лид-форма заменена <strong>чат-агентом на базе Gemini</strong> прямо внутри объявления.</p>
+      <p>Агент обучен на сайте рекламодателя. Он <strong>отвечает на вопросы пользователя ещё до клика</strong> по объявлению, а не отправляет его на лендинг. Открытый бета-режим запущен в США — пилот идёт в образовании, автодилерах и недвижимости. Медицина — следующая на очереди.</p>
+      <p>И это — не отдельная фича. Это <em>часть полной перестройки рекламного стека Google вокруг Gemini.</em> Параллельно запущены Conversational Discovery Ads, Highlighted Answers и AI-Powered Shopping Ads. Реклама как формат меняет суть: от баннера и формы — к диалогу.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Почему это важно для клиник</div>
+    <div class="block-body">
+      <p>Лид-форма как самостоятельная единица <strong>уходит из рекламы</strong>. Будущее лидгена — не «оставьте телефон», а <strong>«поговорите с агентом клиники и поймите, подходим ли мы вам»</strong>.</p>
+      <p>Это меняет всю логику воронки. Сегодня вы платите за клик и лид. Завтра вы платите за <strong>качество разговора</strong> ещё до клика — потому что агент уже отсеял нерелевантных пациентов и привёл к вам мотивированного.</p>
+      <p>Яндекс будет копировать в течение 6–12 месяцев. Кто подготовится первым — тот получит дешевле и лучше отработанных пациентов.</p>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    Реклама в 2026 — это не баннер и не форма. Это первое слово вашей клиники, сказанное роботу-агенту от лица пациента. И от качества этого разговора зависит, какой пациент к вам дойдёт.
+  </div>
+
+  <div class="block">
+    <div class="block-label">Что делать клинике уже сейчас</div>
+    <ol class="steps">
+      <li><strong>Превратите страницу услуг в чёткий FAQ.</strong> Будущий агент Gemini будет учиться на тексте вашего сайта. Если на сайте написано «доступные цены, опытные врачи» — агент это и повторит. Если вы дадите конкретные ответы на вопросы — он ответит конкретно.</li>
+      <li><strong>Соберите «голос клиники»</strong> — 50–100 типовых вопросов пациента и эталонные ответы от ваших координаторов и врачей. Это будущий контент-завод для AI-агента. Без него реклама-разговор не заработает.</li>
+      <li><strong>Запустите Telegram/сайт-бота уже сейчас</strong> с этими сценариями. Отработайте, какие вопросы конвертируют в запись, а какие — в отказ. Это даст вам данные, к которым подключится Google-агент через год.</li>
+      <li><strong>Перестройте мышление о воронке.</strong> Не «как привести лид», а «как выглядит идеальный разговор с пациентом до первой записи». Это и есть новая рекламная креативная задача.</li>
+    </ol>
+  </div>
+
+  <div class="react">
+    <div class="react-label">Реакция Инсайты</div>
+    <div class="react-title">Кто построит «голос клиники» в 2026 — тот выиграет рекламу 2027.</div>
+    <div class="react-body">
+      <p>Мы в Инсайты считаем, что <strong>главное конкурентное преимущество клиники следующего года — не бюджет на трафик, а качество разговора с пациентом до записи.</strong></p>
+      <p>Это меняет правила всем — от Яндекса до СММ-агентств. Мы уже встраиваем работу с AI-агентами в новый поток курса «AI Бренд-Маркетинг в формате Lovemark» и в проекты Cosmarketing × Instformation. Кто хочет быть готовым — приходите.</p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="foot-top">
+    <div><strong>ИНСАЙТЫ</strong> · консалтинговое агентство</div>
+    <div>Новость дня · 17 июня 2026</div>
+  </div>
+  <div class="foot-sources">
+    <strong>Источники:</strong><br>
+    · <a href="https://www.techwyse.com/news/industry-news/google-marketing-live-2026-gemini-ad-stack" target="_blank">Google Marketing Live 2026: Gemini Eats the Ad Stack — TechWyse</a><br>
+    · <a href="https://ivristech.com/google-business-agent-for-leads-b2b/" target="_blank">Google Business Agent for Leads: Gemini Chat in Search Ads — Ivristech</a><br>
+    · <a href="https://www.cmswire.com/digital-marketing/google-marketing-live-how-google-is-building-an-ai-native-marketing-ecosystem/" target="_blank">Google Marketing Live 2026: Gemini Takes the Wheel — CMSWire</a><br>
+    · <a href="https://searchengineland.com/google-tests-new-conversational-ad-formats-in-ai-mode-and-search-478115" target="_blank">Google tests new conversational ad formats — Search Engine Land</a><br>
+    · <a href="https://blog.google/products/ads-commerce/google-marketing-live-2026-collection/" target="_blank">Google Marketing Live 2026: News and announcements — Google Blog</a>
+  </div>
+</footer>
+
+</body>
+</html>
