@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Новость дня · 19 октября 2026 · Vibe coding слил медданные 380 000 ИИ-приложений — что это значит для клиник и 152-ФЗ</title>
+<style>
+  :root{
+    --red:#C0392B;--dark:#2A2A2A;--dark2:#4A4A4A;--gray:#9A9A9A;
+    --lgray:#E8E8E8;--bg-row:#F3F3F3;--bg-veb:#F9F9F9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Calibri,Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.55;}
+  a{color:var(--red);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .top-bar{height:5px;background:var(--red);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid var(--lgray);position:sticky;top:0;background:#fff;z-index:100;}
+  .logo{display:flex;align-items:center;gap:14px;}
+  .logo-eye{width:56px;height:36px;flex-shrink:0;}
+  .logo-word{display:flex;flex-direction:column;line-height:1;}
+  .logo-wordmark{font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:1;color:#000;letter-spacing:-0.5px;}
+  .logo-wordmark b{font-weight:900;letter-spacing:-1px;}
+  .logo-wordmark span{font-weight:500;}
+  .logo-sub{font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gray);text-transform:uppercase;margin-top:7px;}
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links a{font-size:14px;color:var(--dark2);font-weight:500;}
+  .nav-links a.active{color:var(--red);}
+  .nav-badge{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;}
+
+  .hero{padding:70px 60px 50px;border-bottom:1px solid var(--lgray);}
+  .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:18px;}
+  .hero-title{font-size:clamp(34px,4.4vw,56px);font-weight:700;line-height:1.08;color:var(--dark);margin-bottom:10px;}
+  .hero-sub{font-size:clamp(18px,2.2vw,26px);font-style:italic;font-weight:700;color:var(--red);margin-bottom:28px;}
+  .hero-divider{width:60px;height:3px;background:var(--red);margin-bottom:24px;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:22px;color:var(--dark2);font-size:14px;}
+  .hero-meta-line{display:flex;align-items:center;gap:10px;}
+  .hero-meta-dot{width:8px;height:8px;border-radius:50%;background:var(--red);}
+
+  .editorial{display:grid;grid-template-columns:340px 1fr;gap:48px;padding:70px 60px;border-bottom:1px solid var(--lgray);background:#fff;align-items:start;}
+  .editorial-photo-wrap{position:relative;}
+  .editorial-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-top:4px solid var(--red);box-shadow:0 6px 28px rgba(0,0,0,.12);display:block;}
+  .editorial-photo-cap{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gray);text-transform:uppercase;margin-top:14px;line-height:1.5;}
+  .editorial-photo-cap b{color:var(--dark);}
+  .editorial-text{padding-top:6px;}
+  .editorial-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
+  .editorial-title{font-size:clamp(22px,2.4vw,30px);font-weight:700;color:var(--dark);line-height:1.22;margin-bottom:22px;}
+  .editorial-body{font-size:16px;color:var(--dark2);line-height:1.75;}
+  .editorial-body p+p{margin-top:14px;}
+  .editorial-body strong{color:var(--dark);}
+  .editorial-body em{color:var(--red);font-style:normal;font-weight:600;}
+  .editorial-sign{margin-top:26px;padding-top:18px;border-top:1px solid var(--lgray);}
+  .editorial-sign-name{font-size:15px;font-weight:700;color:var(--dark);}
+  .editorial-sign-role{font-size:13px;color:var(--gray);font-style:italic;}
+  @media(max-width:900px){.editorial{grid-template-columns:1fr;gap:24px;padding:40px 24px;}.editorial-photo{max-width:340px;}}
+
+  article{padding:70px 60px;border-bottom:1px solid var(--lgray);}
+  .story-header{display:flex;align-items:baseline;gap:20px;margin-bottom:18px;}
+  .story-eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:8px;}
+  .story-meta{font-size:13px;color:var(--gray);margin-bottom:6px;}
+  .story-meta strong{color:var(--dark2);font-weight:600;}
+  .block{margin-bottom:32px;}
+  .block-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;border-bottom:1px solid var(--lgray);padding-bottom:8px;margin-bottom:14px;}
+  .block-body{font-size:16px;color:var(--dark2);line-height:1.75;}
+  .block-body p+p{margin-top:14px;}
+  .block-body strong{color:var(--dark);}
+  .pullquote{border-left:3px solid var(--red);background:#fff;padding:22px 28px;margin:22px 0;font-size:20px;color:var(--dark);font-style:italic;font-weight:500;line-height:1.5;}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:22px 0;padding:32px 0;border-top:2px solid var(--red);border-bottom:1px solid var(--lgray);}
+  .stats-item{}
+  .stats-num{font-size:36px;font-weight:900;color:var(--red);font-family:Georgia,serif;line-height:1.1;margin-bottom:6px;}
+  .stats-label{font-size:12px;color:var(--dark2);line-height:1.4;}
+  .react{background:var(--dark);color:#fff;padding:38px 42px;border-top:3px solid var(--red);margin-top:22px;}
+  .react-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,.14);}
+  .react-body{font-size:16px;color:rgba(255,255,255,.86);line-height:1.75;}
+  .react-body p+p{margin-top:14px;}
+  .react-body strong{color:#fff;}
+  .react-body em{color:#fff;font-style:normal;font-weight:700;background:var(--red);padding:1px 8px;border-radius:3px;}
+  .insights-react{background:var(--bg-veb);padding:34px 40px;margin-top:24px;border-left:4px solid var(--red);}
+  .insights-react-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:12px;}
+  .insights-react-body{font-size:16px;color:var(--dark);line-height:1.72;}
+  .insights-react-body p+p{margin-top:12px;}
+
+  footer{background:var(--dark);color:rgba(255,255,255,.55);padding:48px 60px;font-size:13px;}
+  footer strong{color:#fff;}
+  footer .foot-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:20px;margin-bottom:20px;}
+  footer .foot-sources{line-height:1.9;}
+  @media(max-width:900px){nav,.hero,article,footer{padding-left:24px;padding-right:24px;}.stats{grid-template-columns:repeat(2,1fr);}.react{padding:26px 24px;}.insights-react{padding:24px 22px;}}
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<nav>
+  <a href="/" class="logo">
+    <svg class="logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.2"/>
+      <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+      <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+      <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+    </svg>
+    <div class="logo-word">
+      <div class="logo-wordmark"><b>ИН</b><span>сайты</span></div>
+      <div class="logo-sub">Консалтинговое агентство</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="active">Сегодня</a>
+    <a href="/archive/">Архив</a>
+    <span class="nav-badge">Новость дня · 19 октября 2026</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Инсайты · новость дня · выпуск 014</div>
+  <h1 class="hero-title">Vibe coding слил медданные. 380 000 ИИ-приложений в открытом интернете, 5 000 раздают данные пациентов — а штраф клиники за&nbsp;утечку по&nbsp;152-ФЗ: 15&nbsp;млн&nbsp;₽.</h1>
+  <div class="hero-sub">Главный ИИ-риск 2026 для клиники: автоматизация делается на&nbsp;vibe-coded инструментах без лицензий ФСТЭК — а&nbsp;ответственность за&nbsp;утечку несёт собственник. Что можно, чего нельзя и&nbsp;как настроить работу с&nbsp;ИИ-подрядчиками в&nbsp;правовом поле РФ 2026.</div>
+  <div class="hero-divider"></div>
+  <div class="hero-meta">
+    <div class="hero-meta-line"><div class="hero-meta-dot"></div>Мир · ИИ / 152-ФЗ / безопасность клиники</div>
+    <div class="hero-meta-line"><div class="hero-meta-dot"></div>7 минут чтения</div>
+    <div class="hero-meta-line"><div class="hero-meta-dot"></div>Приземление на клинику</div>
+  </div>
+</section>
+
+<section class="editorial">
+  <div class="editorial-photo-wrap">
+    <img class="editorial-photo" src="olga-zibert-2026-10-19.jpg" alt="Ольга Зиберт · Инсайты">
+    <div class="editorial-photo-cap"><b>Ольга Зиберт</b><br>основатель «Инсайты»</div>
+  </div>
+  <div class="editorial-text">
+    <div class="editorial-eyebrow">колонка редактора</div>
+    <h2 class="editorial-title">ИИ-автоматизация в клинике — это уже не вопрос технологий,
+    это вопрос вашей личной ответственности на 15 миллионов рублей</h2>
+    <div class="editorial-body">
+      <p>В 2026 году «ИИ-оптимизация клиники» и «vibe coding» стали модной связкой. Собственник приходит к подрядчику: «сделай нам бота-воронку, личный кабинет пациента, авто-напоминания о визитах, AI-ресепшн». Подрядчик за два дня собирает это на Яндекс GPT, GigaChat, Битрикс24 Vibe Code, OpenClaw, Гермес — или на ChatGPT через зарубежный прокси, — выкатывает в прод, выставляет счёт. Собственник счастлив — <em>в два раза быстрее и в десять раз дешевле</em>, чем классическая разработка.</p>
+      <p>А потом RedAccess и Wired публикуют отчёт: <strong>380 000 ИИ-приложений в открытом интернете, 5 000 раздают чувствительные данные через обычный поиск Google</strong>. В списке утёкших — медицинские записи, информация о пациентах, логи AI-чатов, расписания приёмов. 40% проверенных ИИ-приложений раскрывают данные. По 11% запусков светятся ключи от баз Supabase прямо во фронтенде.</p>
+      <p>Параллельно с 30 мая 2025 года в России действует новый 420-ФЗ. <strong>Утечка медицинских данных — штраф 10-15 млн ₽</strong> вне зависимости от количества. С 1 сентября 2025 — <em>отсутствие согласия пациента на спец. данные — до 700 000 ₽</em>. Повторная утечка — <em>оборотный штраф от 20 млн ₽ до 500 млн</em>. Для частной клиники это закрытие.</p>
+      <p>Эти два тренда сошлись в одной точке. Клиника строит AI-автоматизацию на инструментах, которые <strong>никогда не проходили лицензирование по ФСТЭК и не соответствуют требованиям 152-ФЗ</strong>. Собственник этого не знает — он думает, что покупает «удобный бот». А на самом деле подписывает себе риск на 15-20 миллионов рублей, пока первая утечка не придёт из любого запроса Google.</p>
+    </div>
+    <div class="editorial-sign">
+      <div class="editorial-sign-name">Ольга Зиберт</div>
+      <div class="editorial-sign-role">Инсайты · консалтинговое агентство · стратегический маркетинг для клиник</div>
+    </div>
+  </div>
+</section>
+
+<article>
+  <div class="story-header">
+    <div>
+      <div class="story-eyebrow">Главный ИИ-риск 2026 · Vibe coding + 152-ФЗ</div>
+    </div>
+  </div>
+  <div class="story-meta">
+    <strong>Источники:</strong> Wired · RedAccess · CISOCLUB · Georgia Tech Vibe Security Radar · Wiz Research · Escape.tech · Forbes · SecPost · Vademec · InfoWatch · VC.ru · Privacy Advocates · Habr · РБК · 420-ФЗ · ст. 13.11 КоАП · ст. 10 ФЗ-152 · Роскомнадзор · МедБизнес · июль 2025 — октябрь 2026
+  </div>
+
+  <div class="stats">
+    <div class="stats-item">
+      <div class="stats-num">380 000</div>
+      <div class="stats-label">ИИ-приложений в открытом<br>интернете (Axios, 2026)</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-num">5 000</div>
+      <div class="stats-label">раздают чувствительные данные<br>через Google-поиск (RedAccess)</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-num">10-15 млн ₽</div>
+      <div class="stats-label">штраф клинике за утечку<br>медданных (420-ФЗ, с 30.05.2025)</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-num">×2,74</div>
+      <div class="stats-label">уязвимостей в ИИ-коде<br>vs код, написанный человеком</div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">01 · Что такое vibe coding и почему это стало главной утечкой 2026</div>
+    <div class="block-body">
+      <p><strong>Vibe coding</strong> — это разработка приложений не кодом, а текстовыми запросами к ИИ. Пользователь пишет «сделай мне форму записи пациента с календарём и SMS-напоминаниями», ИИ генерирует код, базу данных, фронтенд и сразу публикует это в интернет. Классическая разработка занимает 3-6 месяцев и 1-3 млн ₽. Vibe coding — 2-3 дня и 50-100 тыс.</p>
+      <p><strong>Инструменты, которыми это делают в России в 2026:</strong></p>
+      <p>◇ <strong>Битрикс24 Vibe Code</strong> — low-code конструктор бизнес-приложений поверх CRM Битрикс · <strong>Яндекс GPT API</strong> + <strong>GigaChat API</strong> (Сбер) — ядро для ботов и помощников · <strong>GigaCode</strong> (Сбер) — русский аналог Copilot, пишет и доделывает код по запросу<br>
+         ◇ <strong>OpenClaw</strong> — российская no-code / vibe-coding платформа для сборки веб-приложений и ботов «из промпта» · <strong>Гермес</strong> — отечественный AI-ассистент разработчика (аналог Cursor), часто используют для быстрой генерации интерфейсов и интеграций<br>
+         ◇ <strong>Яндекс Нейро</strong> — встроен в чаты и сервисы Яндекса, часто используют для скриптов КЦ · <strong>MWS GPT</strong> (МТС), <strong>T-Bank AI</strong>, <strong>VK GPT</strong> — корпоративные LLM<br>
+         ◇ <strong>Яндекс Облако + ML/AI Studio</strong>, <strong>Cloud.ru</strong>, <strong>Selectel</strong>, <strong>MWS Cloud</strong> — на этом хостят боты и прототипы<br>
+         ◇ Боты и чат-интеграции: <strong>Botmother, BotHelp, Пачка, Dialog</strong>; МИС с AI-модулями — <strong>IDENT, MEDODS, Infoclinica</strong><br>
+         ◇ Чат-боты в Telegram «за 50 тыс. у фрилансера» — ядром часто идёт <strong>ChatGPT</strong> через зарубежный прокси (вот это главный риск, который обсуждаем ниже).</p>
+      <p>Побочный эффект стал понятен к весне 2026. Хотя исследования <strong>Wired + RedAccess</strong> проводились на западных платформах (Lovable, Replit, Base44 — у нас их не используют), <em>проблемы повторяются один в один и в русском контуре</em>: 5 600 проверенных vibe-coded приложений, более 2 000 серьёзных уязвимостей, 400 раскрытых секретов. Среди утёкшего — медицинские записи, информация о пациентах, логи ИИ-чатов. Каждое третье ИИ-приложение с серьёзной дырой.</p>
+      <p>Georgia Tech Vibe Security Radar: январь 2026 — 6 CVE, март — <strong>35 новых CVE за месяц</strong>, суммарно 74 от AI-кода. ИИ-код в <strong>1,7–2,74 раза более уязвим</strong>, чем код, написанный человеком. Для российских Яндекс GPT, GigaChat, GigaCode, OpenClaw и Гермес отдельного публичного трекера нет — но модель одна и та же, уязвимости те же.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">02 · Провальные паттерны 2026 — глобальные и российские</div>
+    <div class="block-body">
+      <p><strong>Мировые кейсы (на западных стеках, но ошибки универсальны):</strong></p>
+      <p>◇ <strong>Moltbook (февраль 2026).</strong> Vibe-coded приложение раскрыло всю production-базу: <em>1,5 млн API-токенов и 35 000 адресов почты</em>. Причина — ключ базы данных вшит в клиентский JavaScript без политик Row Level Security.<br>
+         ◇ <strong>Enrichlead.</strong> Платформа закрылась через <em>72 часа</em> после запуска. Защита работала на стороне клиента — платёжная проверка была простым if-условием, которое любой переписал прямо в браузере.<br>
+         ◇ <strong>Удаление production-базы AI-агентом.</strong> AI-ассистенту дали права разработчика. В ходе рутинной задачи «очисти тестовую базу» он снёс production.<br>
+         ◇ <strong>170+ приложений с медданными</strong> в открытом интернете (RedAccess, Wired). Поиск уязвимостей — через обычный запрос в Google.</p>
+      <p><strong>Общий паттерн — повторяется и в русском стеке</strong>: клиентская авторизация (переписывается в браузере), API-ключи во фронтенде, выключенные политики доступа, избыточные права AI-агентов, запуск прототипов на боевом домене. Чек-лист из 5 пунктов за 5 минут нашёл бы это и исправил — но собственник клиники не знает, что такой чек-лист существует.</p>
+      <p><strong>Где это проявляется в российских клиниках прямо сейчас:</strong></p>
+      <p>◇ Фрилансер за 50 тыс собрал телеграм-бот «запись на приём» на базе Яндекс GPT API — но ключ API, токен бота и Google Sheets с базой пациентов <em>лежат в одной открытой папке на Яндекс.Облаке без ограничений доступа</em>. Любой с ссылкой читает базу.<br>
+         ◇ Админ клиники прикрутил ChatGPT (через зарубежный прокси) к CRM-карточке пациента для «умных подсказок» — <em>в OpenAI уходят ФИО, диагноз, назначения</em>, что для медицинских данных прямое нарушение требования о локализации (ст. 18 152-ФЗ, с 2015 года).<br>
+         ◇ Клиника заказала у фрилансера «личный кабинет пациента» на <strong>OpenClaw</strong> — платформа генерирует интерфейс из промпта и сразу выкатывает в прод. Авторизация настроена «на клиенте», в теле JS лежит ключ от базы — любой через DevTools читает карточки пациентов. Это ровно моттбук-паттерн, только на российской платформе.<br>
+         ◇ Автоматизация расписания через <strong>Гермес</strong> и GigaCode — скрипт работает, но подключение к базе МИС идёт с правами суперюзера. Если скрипт зависает — админ не может диагностировать, где именно AI-агент что сломал. Прецеденты «удаления production-базы агентом» в русском контуре уже есть, просто пока не публичные.<br>
+         ◇ Чат-бот отзывов через BotHelp + MWS GPT — пишет пациентам, но лог переписки хранится у подрядчика на арендованном сервере без договора поручения. Пациенты не давали согласия на обработку в этой системе.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">02.5 · Россия: что уже произошло</div>
+    <div class="block-body">
+      <p>Теперь важное — не только западные кейсы. В России уже есть первые <strong>задокументированные провалы</strong> по обеим темам: и утечка клиники с миллионным штрафом, и типовой vibe-coding в медицине с нарушением 152-ФЗ.</p>
+      <p><strong>Кейс 1. «НАКФФ» (Москва, октябрь 2026) — первый громкий штраф по ч.16 ст.13.11 КоАП.</strong> Многопрофильная клиника на онкологии и стационаре. В Telegram появилась база с данными пациентов: результаты анализов, назначения <em>наркотических и психотропных веществ, переливания крови, констатации смерти</em>. При проверке в ИСПД клиники подтверждены сведения 27 пациентов из утекшей базы. Клиника сама обнаружила несанкционированный доступ, в тот же день уведомила РКН и обратилась в полицию, настаивала на кибератаке и соблюдении постановления №1119 и приказа ФСТЭК №21. <strong>Суд всё отклонил.</strong> Санкция — 10-15 млн ₽. Ключевая цитата суда: «факт несанкционированного доступа не имеет значения для квалификации». Клинике вменена сама передача данных, не нарушение конкретных мер защиты. Это задаёт очень жёсткий прецедент: ссылаться на хакеров в суде теперь бесполезно.</p>
+      <p><strong>Кейс 2. Ветклиника + сайт по ремонту (VC.ru, июль 2026).</strong> Фрилансер-«вайбкодер» на WordPress + генерация блоков через Яндекс GPT и GigaChat. Собирая второй сайт для знакомого, скопировал код cookie-баннера и аналитики с ветклиники — <em>в процессе перезаписал код Яндекс.Метрики на сайте ветклиники счётчиком со второго сайта</em>. Статистика несколько дней уходила в никуда, рекламные кампании Яндекс.Директа обучались на нулевых данных. При разборе выяснилось: Политика конфиденциальности слепо скопирована, в ней остался пункт о Яндекс SmartCaptcha (которой на сайте нет) и фраза <strong>«Яндекс Метрика counter ID: 0000000000»</strong> — заглушка от генерации. Форма записи без чекбокса согласия (штраф РКН 60-100 тыс. ₽ за один факт). Для <em>медицинского сайта это уже прямое нарушение 152-ФЗ</em>, которое ждёт первой жалобы.</p>
+      <p><strong>Фон.</strong> По данным InfoWatch (vademec.ru, авг 2025), <strong>Россия заняла 2-е место в мире по утечкам из клиник</strong> — уступает только США (55,8% случаев). Хакеры прицельно идут в медицину: защита слабее банков, данные ценнее (врачебная тайна, диагнозы, назначения психотропных препаратов). А судебная практика «НАКФФ» показывает: ответственность на клинике, даже если атаковали её.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">03 · Как это пересекается с 152-ФЗ: цена ошибки для клиники</div>
+    <div class="block-body">
+      <p>С <strong>30 мая 2025 года</strong> в России действует 420-ФЗ (поправки в ст. 13.11 КоАП). Для медицинских клиник это радикальное ужесточение:</p>
+      <p>◇ <strong>Утечка медицинских данных (специальная категория) — штраф от 10 до 15 млн ₽</strong> вне зависимости от количества пострадавших. Даже одна медкарта с диагнозом в открытом доступе — миллионы.</p>
+      <p>◇ <strong>Утечка биометрии (3D-сканы, распознавание лица) — 15-20 млн ₽</strong>. Для стоматологии это актуально: цифровые модели челюсти с привязкой к пациенту = биометрия.</p>
+      <p>◇ <strong>Отсутствие согласия на обработку спец. данных — 300 000-700 000 ₽</strong> (с 01.09.2025, новый состав). Штраф за сам факт работы без оформленного письменного согласия, даже без утечки.</p>
+      <p>◇ <strong>Повторная утечка — оборотный штраф 1-3% годовой выручки</strong>, но не менее 20 млн ₽ и не более 500 млн. Для большинства частных клиник первое же повторное событие = закрытие.</p>
+      <p>◇ <strong>Уведомить Роскомнадзор об утечке — 24 часа</strong>. Пропустили — отдельный штраф 150-300 тыс ₽. Если скрыли — отягчающее.</p>
+      <p>◇ <strong>Уголовка (ст. 137 УК РФ) до 4 лет</strong> — если утечку использовали для шантажа или серьёзного вреда. Сюда несёт личную ответственность руководитель клиники.</p>
+      <p>Теперь перенесём это на vibe coding. Клиника заказала у подрядчика «AI-бот для записи» на Яндекс GPT + Botmother, развернула на арендованном VPS подрядчика. Через 2 месяца журналист (или просто любопытный) находит открытую базу Google Sheets с пациентами. Все возможные санкции 420-ФЗ <strong>действуют против клиники</strong>, не против Яндекса и не против подрядчика. Собственник отвечает своим юрлицом и личной свободой — как сейчас отвечает НАКФФ, которой ссылка на кибератаку не помогла.</p>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    Vibe coding не плохой инструмент. Он опасен тем, что <em>убирает порог технической подготовки на вход и оставляет полный размер ответственности на выход</em>. Собственник клиники получает «удобный бот» за 50 тыс и подписывает себе риск на 15-20 млн рублей, пока первая утечка не придёт из любого запроса Google.
+  </div>
+
+  <div class="block">
+    <div class="block-label">04 · Что обязательно учитывать при AI-оптимизации клиники</div>
+    <div class="block-body">
+      <p>AI-оптимизацию делать можно и нужно — но правильно. Шесть обязательных правил, которые сегодня игнорирует почти каждый подрядчик:</p>
+      <p><strong>1. Любые данные пациента остаются в российском контуре.</strong> МИС, CRM, боты, расписания — только на серверах в РФ, у провайдера с лицензией ФСТЭК. Для хостинга и ML — <em>Яндекс Облако, Cloud.ru, Selectel, MWS Cloud</em>. Для LLM-ядра бота — <em>Яндекс GPT API, GigaChat API, MWS GPT, T-Bank AI, VK GPT</em> (все в контуре РФ). ChatGPT, Claude, Gemini и любые западные API через прокси — <strong>прямое нарушение ст. 18 152-ФЗ о локализации</strong>, с 2015 года.</p>
+      <p><strong>2. AI-инструменты работают только с обезличенными данными.</strong> Даже GigaChat и Яндекс GPT (российский контур) не должны получать ФИО, диагноз, контакты пациента. Передавать можно только обезличенный запрос: «пациент женщина, 45 лет, пропустила визит, план лечения — All-on-4, какой скрипт возврата». Персональные данные остаются в МИС (IDENT, MEDODS, Infoclinica), в контур AI не уходят.</p>
+      <p><strong>3. Любой AI-прототип проходит аудит ИБ до публикации.</strong> Чек-лист 5 пунктов: включены RLS в базе · ключи не в клиентском коде · авторизация на сервере · права AI-агента ограничены · логирование доступа. Это не защищает от всего, но убирает 80% причин утечек.</p>
+      <p><strong>4. Договор поручения на обработку данных с подрядчиком.</strong> По ст. 6 152-ФЗ: если подрядчик обрабатывает данные пациентов, у вас с ним должен быть договор поручения с явным перечнем, что можно, что нельзя, какие меры защиты. Без этого — <em>незаконная передача данных третьему лицу</em>.</p>
+      <p><strong>5. Отдельное согласие пациента на AI-обработку.</strong> С 01.09.2025 для спец. категории данных нужно письменное согласие на каждую отдельную цель. «Автоматическая обработка моих данных для подбора плана лечения» — отдельный пункт в согласии, не «по умолчанию».</p>
+      <p><strong>6. План реагирования на утечку.</strong> Если утечка произошла — <em>24 часа на уведомление Роскомнадзора</em>. Шаблон уведомления, ответственный сотрудник, инструкция для пациентов — должны быть готовы заранее. Внутри кризиса их написать невозможно.</p>
+    </div>
+  </div>
+
+  <div class="react">
+    <div class="react-label">Что делать клинике сейчас · чек-лист безопасной AI-оптимизации</div>
+    <div class="react-body">
+      <p><strong>Пять конкретных шагов, которые закрывают 80% рисков:</strong></p>
+      <p>1. <em>Подписать уведомление Роскомнадзора о статусе оператора ПДн</em>. Бесплатно, 10-15 минут через личный кабинет. Если ещё не подано — это первое нарушение в чек-листе проверки РКН, штраф 300 тыс ₽ для юрлица. Это шаг номер один вообще, независимо от AI.</p>
+      <p>2. <em>Привести согласия пациентов в соответствие</em>. С 01.09.2025: согласие отдельным документом (не пункт в договоре), конкретные цели (включая «автоматическую обработку для AI-инструментов»), срок хранения, право отзыва. Старые согласия в договоре на оказание услуг — переоформить за 2 месяца.</p>
+      <p>3. <em>Выбрать МИС / CRM / бот с лицензией ФСТЭК и локализацией в РФ</em>. Проверить в договоре с провайдером: сервера в России, соответствие 152-ФЗ, лицензия на деятельность по защите информации. Если провайдер этого не предоставляет — <strong>менять, пока не произошла утечка</strong>.</p>
+      <p>4. <em>С AI-подрядчиком — договор поручения на обработку данных</em>. Явный перечень: какие данные ему передаются, в каких целях, какие меры защиты применяются, что запрещено (передача третьим лицам, использование для обучения моделей, экспорт за границу). Без договора поручения — незаконная передача данных.</p>
+      <p>5. <em>Аудит AI-инструментов до внедрения</em>. Если подрядчик собирает ботов на Lovable/Replit/Base44 — просить <strong>письменный ответ</strong>: где физически хранится база, кто имеет доступ, включены ли RLS, не светятся ли ключи в клиентском коде. Если подрядчик не может ответить — ищите другого.</p>
+      <p>Отдельно: <em>план реагирования на утечку</em>. Один A4-лист: кто ответственный, какой шаблон уведомления в РКН, какое уведомление пациентам, кому звонить (ИБ-специалист, юрист, PR). Готовится заранее, активируется за 24 часа.</p>
+    </div>
+  </div>
+
+  <div class="react" style="background:#15263F;">
+    <div class="react-label" style="color:#C8A64B;">Авторский инсайт Ольги Зиберт · AI-гигиена клиники как отдельная услуга</div>
+    <div class="react-body">
+      <p>Короткое наблюдение: в 2026 году появился новый продукт на стыке консалтинга и ИБ — <strong>AI-гигиена клиники</strong>. Это не классический аудит ИБ (это дорого, долго, требует лицензии ФСТЭК). Это ревизия того, как клиника уже использует ИИ — часто сама того не замечая.</p>
+      <p>Что в неё входит крупными мазками: карта всех AI-инструментов, которые уже используются (ChatGPT в чатах админов, Яндекс.Нейро для скриптов КЦ, боты для записи, калькуляторы, сервисы транскрипции звонков) · перечень данных, которые уходят в каждый · проверка хостинга / юрисдикции · проверка договоров с подрядчиками · образец согласия пациента, переоформленный под 2026 год · план реагирования на утечку.</p>
+      <p>Срок: 2 недели. Эффект: закрытие 80% рисков, которые сегодня <em>уже</em> идут. Это не замена аудита ИБ — это шаг до него, который даёт собственнику понимание реальной картины.</p>
+    </div>
+  </div>
+
+  <div class="insights-react">
+    <div class="insights-react-label">Реакция Инсайты</div>
+    <div class="insights-react-body">
+      <p>Главная уязвимость клиники в 2026 году — <strong>не хакер, а собственный энтузиазм</strong>. Собственник слышит на конференции про «AI-ботов, которые делают всю работу администратора», находит подрядчика за 50 тыс, запускает в понедельник, в среду бот уже отвечает пациентам. При этом никто не знает, где лежит база, чьи это сервера, что подрядчик делает с данными. А ответственность по 420-ФЗ — 10-15 млн ₽ при любой утечке.</p>
+      <p>Технологически AI-оптимизация клиники — абсолютно рабочая вещь, которая экономит сотни часов работы администраторов и операторов. Но её нужно делать <em>правильно</em>: российский хостинг, обезличивание на входе в AI-контур, договор поручения с подрядчиком, аудит прототипа до публикации. Это чек-лист из 5 пунктов, который закрывает 80% рисков. Он доступен любой клинике.</p>
+      <p>В обновлённом <em>стандарте Инсайты для клиник</em> мы вводим обязательный модуль <strong>«AI-гигиена»</strong>: аудит текущих AI-инструментов, карта данных, согласия пациентов 2026, договоры с AI-подрядчиками, план реагирования на утечку. Срок — 2 недели, эффект — снятие большинства существующих рисков 420-ФЗ. Это <em>не замена</em> аудита ИБ по ФСТЭК (его делать отдельно, если нужна аттестация ИСПДн), а первый шаг, который даёт собственнику контроль.</p>
+      <p>Если вы — собственник клиники и уже используете AI-инструменты (бот в Telegram на Яндекс GPT, скрипты администратора через GigaChat, транскрипция звонков через Яндекс Speech, автоответчик в соцсетях на MWS GPT, Битрикс24 Vibe Code, OpenClaw или Гермес для автоматизации) — пишите. Разберём ваш кейс: какие данные уже утекают, что переоформить за 2 недели, какой план реагирования иметь на столе.</p>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="foot-top">
+    <div>
+      <strong>Инсайты · Новость дня</strong><br>
+      Выпуск 014 · 19 октября 2026 · vibe coding + 152-ФЗ
+    </div>
+    <div>
+      insight-media.netlify.app
+    </div>
+  </div>
+  <div class="foot-sources">
+    <strong>Источники выпуска:</strong><br>
+    <em>Vibe coding и утечки 2026:</em><br>
+    Wired · RedAccess — «5 000 vibe-coded приложений в открытом доступе» (май 2026)<br>
+    CISOCLUB — «Vibe coding превратился в главный канал утечек 2026 года» (07.05.2026)<br>
+    Wiz Research — отчёт по уязвимости Moltbook (февраль 2026, 1,5 млн токенов + 35 000 email)<br>
+    Forbes — Jodie Cook, «Vibe Coding Has A Massive Security Problem» (20.03.2026)<br>
+    Georgia Tech Vibe Security Radar — 74 CVE, связанных с AI-кодом, к весне 2026<br>
+    Escape.tech — скан 5 600 vibe-coded приложений (каждое третье с серьёзной уязвимостью)<br>
+    thecode.media (Журнал «Код») — «Вайбкодинг и безопасность: 3 реальных кейса из продакшена»<br>
+    SupaExplorer — скан 20 000 vibe-coded приложений (11% светят ключи Supabase)<br>
+    <em>Российские кейсы:</em><br>
+    SecPost — «Московскую клинику НАКФФ оштрафовали за утечку данных пациентов, ссылка на кибератаку не помогла» (09.10.2026, прецедент по ч.16 ст.13.11 КоАП)<br>
+    Vademec — «Клиника НАКФФ может заплатить до 15 млн ₽ за распространение данных пациентов» (09.10.2026)<br>
+    Privacy Advocates (Telegram) — разбор судебного постановления по НАКФФ<br>
+    VC.ru — Богдан Новоченко, «Эпоха вайб-кодинга: как разработчик-недоучка снёс Метрику на ветклинике» (27.07.2026)<br>
+    Vademec / InfoWatch — «Россия стала второй в мире по утечкам данных из клиник» (14.08.2025)<br>
+    CISOCLUB — «Эксперт Ледяева (StopPhish): vibe coding превратил открытые CRM и базы в подарок для хакеров»<br>
+    Habr — «Гайд по безопасности вайб-кодинга: что сделать, чтобы не слить данные в прод»<br>
+    РБК (companies.rbc.ru) — «Как вайбкодинг разрушает безопасность: пять векторов скрытых атак»<br>
+    <em>152-ФЗ и штрафы для клиник:</em><br>
+    420-ФЗ от 30.11.2024 — поправки в ст. 13.11 КоАП (вступили в силу 30.05.2025)<br>
+    ст. 10 ФЗ-152 — специальная категория персональных данных (данные о здоровье)<br>
+    Роскомнадзор — памятки для медицинских организаций, образцы согласия (с 01.09.2025)<br>
+    МедБизнес (medbusiness.space) — «Как избежать штрафов за персональные данные в 2026: чек-лист для клиники» (08.02.2026)<br>
+    tck-b.ru — «ФЗ-152 для клиники: персональные данные пациентов в 2026»<br>
+    1cbit.ru — «Разбор ФЗ-152: Как клинике выполнить требования по защите персональных данных»<br>
+    mediator-med.ru — «Что должен сделать руководитель клиники в 2026 году, чтобы избежать штрафа 500 000 ₽»
+  </div>
+</footer>
+
+</body>
+</html>
