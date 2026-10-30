@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Новость дня · 30 октября 2026 · AI Native Conf 2026 — короткая выжимка по докладам со спикерами, компаниями и реальным опытом</title>
+<style>
+  :root{
+    --red:#C0392B;--dark:#2A2A2A;--dark2:#4A4A4A;--gray:#9A9A9A;
+    --lgray:#E8E8E8;--bg-row:#F3F3F3;--bg-veb:#F9F9F9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Calibri,Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.55;}
+  a{color:var(--red);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .top-bar{height:5px;background:var(--red);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid var(--lgray);position:sticky;top:0;background:#fff;z-index:100;}
+  .logo{display:flex;align-items:center;gap:14px;}
+  .logo-eye{width:56px;height:36px;flex-shrink:0;}
+  .logo-word{display:flex;flex-direction:column;line-height:1;}
+  .logo-wordmark{font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:1;color:#000;letter-spacing:-0.5px;}
+  .logo-wordmark b{font-weight:900;letter-spacing:-1px;}
+  .logo-wordmark span{font-weight:500;}
+  .logo-sub{font-size:9px;font-weight:600;letter-spacing:3px;color:var(--gray);text-transform:uppercase;margin-top:7px;}
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links a{font-size:14px;color:var(--dark2);font-weight:500;}
+  .nav-links a.active{color:var(--red);}
+  .nav-badge{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;}
+
+  .hero{padding:60px 60px 40px;border-bottom:1px solid var(--lgray);}
+  .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:18px;}
+  .hero-title{font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.1;color:var(--dark);margin-bottom:10px;}
+  .hero-sub{font-size:clamp(17px,2vw,22px);font-style:italic;font-weight:700;color:var(--red);margin-bottom:24px;}
+  .hero-divider{width:60px;height:3px;background:var(--red);margin-bottom:20px;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:22px;color:var(--dark2);font-size:14px;}
+  .hero-meta-line{display:flex;align-items:center;gap:10px;}
+  .hero-meta-dot{width:8px;height:8px;border-radius:50%;background:var(--red);}
+
+  .intro{padding:50px 60px;border-bottom:1px solid var(--lgray);background:var(--bg-veb);}
+  .intro-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:12px;}
+  .intro-body{font-size:16px;color:var(--dark2);line-height:1.72;max-width:900px;}
+  .intro-body p+p{margin-top:12px;}
+  .intro-body strong{color:var(--dark);}
+
+  article{padding:50px 60px;border-bottom:1px solid var(--lgray);}
+  .section-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:18px;}
+  .section-title{font-size:28px;font-weight:700;color:var(--dark);line-height:1.15;margin-bottom:30px;max-width:860px;}
+
+  .talk{display:grid;grid-template-columns:260px 1fr;gap:36px;padding:24px 0;border-bottom:1px solid var(--lgray);}
+  .talk:last-child{border-bottom:none;}
+  .talk-side{padding-top:4px;}
+  .talk-badge{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;border-top:2px solid var(--red);padding-top:10px;margin-bottom:12px;}
+  .talk-name{font-size:19px;font-weight:700;color:var(--dark);line-height:1.25;margin-bottom:6px;}
+  .talk-role{font-size:13px;color:var(--dark2);line-height:1.45;margin-bottom:4px;}
+  .talk-company{font-size:13px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:1px;}
+  .talk-body{}
+  .talk-title{font-family:Georgia,serif;font-size:19px;font-weight:700;color:var(--dark);line-height:1.3;margin-bottom:14px;}
+  .talk-text{font-size:15px;color:var(--dark2);line-height:1.72;}
+  .talk-text p+p{margin-top:10px;}
+  .talk-text strong{color:var(--dark);}
+  .talk-text em{color:var(--red);font-style:normal;font-weight:600;}
+  .talk-takeaway{margin-top:14px;padding:14px 18px;background:var(--bg-veb);border-left:3px solid var(--red);font-size:14px;color:var(--dark);line-height:1.6;}
+  .talk-takeaway strong{color:var(--red);text-transform:uppercase;letter-spacing:1px;font-size:11px;display:block;margin-bottom:4px;}
+
+  .outro{padding:50px 60px;background:var(--dark);color:#fff;}
+  .outro-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
+  .outro-title{font-size:24px;font-weight:700;color:#fff;margin-bottom:18px;line-height:1.3;max-width:860px;}
+  .outro-body{font-size:16px;color:rgba(255,255,255,.86);line-height:1.72;max-width:860px;}
+  .outro-body p+p{margin-top:12px;}
+
+  footer{background:var(--dark);color:rgba(255,255,255,.55);padding:40px 60px;font-size:13px;border-top:1px solid rgba(255,255,255,.1);}
+  footer strong{color:#fff;}
+  footer .foot-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:18px;margin-bottom:18px;}
+  footer .foot-sources{line-height:1.9;}
+
+  @media(max-width:900px){
+    nav,.hero,.intro,article,.outro,footer{padding-left:24px;padding-right:24px;}
+    .talk{grid-template-columns:1fr;gap:16px;padding:22px 0;}
+    .talk-side{border-top:2px solid var(--red);padding-top:12px;}
+    .talk-badge{border-top:none;padding-top:0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<nav>
+  <a href="/" class="logo">
+    <svg class="logo-eye" viewBox="0 0 56 36" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 18 C 10 3, 46 3, 54 18 C 46 33, 10 33, 2 18 Z" fill="#fff" stroke="#111" stroke-width="2.2"/>
+      <circle cx="28" cy="18" r="11" fill="#C0392B"/>
+      <circle cx="28" cy="18" r="4.5" fill="#1a1a1a"/>
+      <circle cx="31" cy="15" r="1.6" fill="#fff"/>
+    </svg>
+    <div class="logo-word">
+      <div class="logo-wordmark"><b>ИН</b><span>сайты</span></div>
+      <div class="logo-sub">Консалтинговое агентство</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="active">Сегодня</a>
+    <a href="/archive/">Архив</a>
+    <span class="nav-badge">Новость дня · 30 октября 2026</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Инсайты · новость дня · выпуск 017</div>
+  <h1 class="hero-title">AI Native Conf 2026 — выжимка по&nbsp;докладам. Спикеры, компании и&nbsp;реальный опыт внедрения ИИ.</h1>
+  <div class="hero-sub">10&nbsp;докладов главной AI-конференции РФ 2026: что сказали руководители ИИ-направлений Сбера, Райффайзена, Т-Банка, ОТП и&nbsp;специализированных AI-компаний&nbsp;— с&nbsp;какими трудностями столкнулись при внедрении и&nbsp;что из&nbsp;этого применимо в&nbsp;медицинском сегменте.</div>
+  <div class="hero-divider"></div>
+  <div class="hero-meta">
+    <div class="hero-meta-line"><div class="hero-meta-dot"></div>Москва · AI Native Conf · 20.10.2026</div>
+    <div class="hero-meta-line"><div class="hero-meta-dot"></div>7 минут чтения</div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="intro-eyebrow">От&nbsp;редактора</div>
+  <div class="intro-body">
+    <p>Я прошла по всем 23 докладам главной AI-конференции РФ 2026 и выбрала 10 самых практичных — от спикеров уровня руководителей ИИ-направлений крупнейших банков и профильных AI-компаний. Для каждого — короткая выжимка: с какой задачей столкнулась компания, какое решение попробовали, что получилось, какие были сложности.</p>
+    <p>Это <strong>не теоретический разбор</strong>, а <em>реальный опыт практиков</em>, которые уже внедрили ИИ в бизнес и честно рассказывают, где получилось, где нет. В конце статьи — короткое наблюдение, как этот опыт можно переносить в клиническую отрасль, где внедрения ИИ пока только начинаются.</p>
+  </div>
+</section>
+
+<article>
+  <div class="section-eyebrow">10 докладов — опыт из первых рук</div>
+  <h2 class="section-title">Руководители ИИ-направлений крупнейших компаний РФ&nbsp;— о&nbsp;том, что получилось и&nbsp;что нет</h2>
+
+  <!-- 1 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 01</div>
+      <div class="talk-name">Сергей Рябов</div>
+      <div class="talk-role">Руководитель направления AI-трансформации</div>
+      <div class="talk-company">Сбер</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«AI Native трансформация» — keynote</div>
+      <div class="talk-text">
+        <p>Задача: масштабировать ИИ-агентов на тысячи бизнес-процессов внутри Сбера без потери безопасности и управляемости. Первые попытки прикрутить ChatGPT к существующим процессам дали эффект на уровне «−10% рутины у сотрудника», но не влияли на бизнес-метрики.</p>
+        <p>Поворотная точка: отказ от подхода «добавить ИИ к старому процессу» в пользу <strong>перепроектирования процесса целиком</strong> вокруг ИИ. Эффект измеряется не часами, сэкономленными сотрудникам, а изменением цикла принятия решений и операционными метриками.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Прикручивать ИИ к существующим процессам — тупиковый путь. Нужна перепроектировка сверху: от процесса, не от инструмента.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 02</div>
+      <div class="talk-name">Андрей Усенко</div>
+      <div class="talk-role">Руководитель трансформации</div>
+      <div class="talk-company">Райффайзен Банк</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Не ускорять старую организацию, а построить новую»</div>
+      <div class="talk-text">
+        <p>Задача: ускорить вывод новых банковских продуктов на рынок. Первое решение — ИИ-помощники для каждой роли (аналитик, юрист, маркетолог). Результат: продукт выходит быстрее на 15–20%, но архитектура и регламенты всё те же, бутылочное горлышко просто смещается.</p>
+        <p>Поворотная точка: отказались от «ИИ-помощников для ролей» в пользу <em>перестройки сквозного процесса целиком</em>. Единицей трансформации стал не сотрудник, а end-to-end процесс с измеримым бизнес-результатом.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Единицей AI-трансформации должен быть сквозной процесс, а не роль, не сотрудник, не отдельный агент.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 03</div>
+      <div class="talk-name">Богдан Гарбар</div>
+      <div class="talk-role">Руководитель AI-направления</div>
+      <div class="talk-company">ОТП Банк</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Экономика ИИ без иллюзий»</div>
+      <div class="talk-text">
+        <p>Задача: честно посчитать, сколько реально стоит ИИ-внедрение и когда окупается. Проблема рынка: подрядчики продают красивые кейсы, но прячут стоимость поддержки, доработок, обучения модели.</p>
+        <p>Разбор реальной структуры затрат: 30% — разработка, 25% — инфраструктура и сопровождение, 25% — change management и обучение сотрудников, 20% — compliance и безопасность. Пилот без учёта хотя бы одной статьи обречён на провал.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Если в коммерческом предложении на ИИ нет 4 статей (разработка, инфра, change management, compliance) — предложение неполное. Не покупайте.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 04</div>
+      <div class="talk-name">Никита Худов</div>
+      <div class="talk-role">Основатель</div>
+      <div class="talk-company">/strategai</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Агенты как часть штата с&nbsp;первого дня: роли, найм и&nbsp;управление»</div>
+      <div class="talk-text">
+        <p>Задача: как встроить ИИ-агентов в бизнес-процессы клиентов (Сбер, DDXFitness, Askona, Самокат) так, чтобы они стали полноценными членами команды, а не инструментами.</p>
+        <p>Опыт показал: ИИ-агента нужно нанимать как сотрудника. У него должна быть должностная инструкция, роль, подчинение, зона ответственности, KPI. Введён фреймворк <strong>трёх уровней автономии</strong>: советник (ИИ анализирует, человек решает), исполнитель с утверждением (ИИ готовит, человек подтверждает), автономный агент (ИИ сам решает в заданных границах).</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Прежде чем «запустить ИИ-агента», ответьте на вопрос: на какой уровень автономии вы готовы его отпустить. Без этого — любой агент будет либо саботироваться, либо делать не то, что нужно.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 05</div>
+      <div class="talk-name">Екатерина Фирсова</div>
+      <div class="talk-role">Руководитель HR-трансформации</div>
+      <div class="talk-company">Altenar</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«AI-трансформация буксует не&nbsp;в&nbsp;коде, а&nbsp;в&nbsp;людях»</div>
+      <div class="talk-text">
+        <p>Задача: внедрить ИИ в маркетинг и продажи. Технология сработала с первого дня. Через 3 месяца — провал. Сотрудники тихо саботировали: не вносили данные, обходили процессы, продолжали работать «по-старому».</p>
+        <p>Прямая цитата: <em>«Катя, а они нас заменят?» — это реальный вопрос от умного взрослого человека</em>. Пришлось вводить отдельный слой — работу со страхами, объяснение, пересмотр мотивации.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Если в проекте внедрения ИИ не заложен работа с командой — проект провалится. Технологию люди саботируют тише, но увереннее, чем старые процессы.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 06</div>
+      <div class="talk-name">Константин Попандопуло</div>
+      <div class="talk-role">Руководитель направления внедрений</div>
+      <div class="talk-company">Umbrella IT</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Почему сотрудники не используют AI: организационные барьеры»</div>
+      <div class="talk-text">
+        <p>Опыт внедрения ИИ в НОВАТЭК, НЛМК и других промышленных клиентах. Задача: разобраться, почему через полгода после пилота 60–70% сотрудников не пользуются ИИ-инструментом, который им дали.</p>
+        <p>Выявили три главных барьера: <strong>страх увольнения</strong> (сотрудник думает, что сам себя заменяет), <strong>страх ответственности</strong> (если ИИ ошибётся — виноват будет кто-то), <strong>отсутствие нового навыка</strong> (не научили правильно формулировать задачи). Решение — не технологии, а HR-процесс сопровождения.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>60–70% провалов AI-пилотов — не технология, а организационные барьеры. Решение всегда через HR, не через IT.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 07</div>
+      <div class="talk-name">Зоя Маттис</div>
+      <div class="talk-role">Руководитель AI-продуктов</div>
+      <div class="talk-company">Т-Банк</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«AI Agent Design Canvas»</div>
+      <div class="talk-text">
+        <p>Задача: научить продуктовые команды Т-Банка разбираться, где действительно нужен ИИ-агент, а где достаточно обычной автоматизации. Проблема: команды бросались делать «ИИ-помощника» в любую задачу, где была коммуникация.</p>
+        <p>Разработали фреймворк — AI Agent Design Canvas: 7 вопросов, которые команда отвечает перед запуском. Если по трём и более ответам сомнения — это не агент, а чат-бот или сценарный скрипт. Сэкономили около трети бюджета ИИ-разработки.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Не каждая задача требует ИИ-агента. Иногда — обычная автоматизация или бот по сценарию. Разбираться в этом нужно до бюджета, а не после.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 08</div>
+      <div class="talk-name">Дмитрий Антипов</div>
+      <div class="talk-role">Руководитель AI-трансформации</div>
+      <div class="talk-company">Сбер / VSRobotics</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Service as a Software» — новая экономика ИИ</div>
+      <div class="talk-text">
+        <p>Задача: переосмыслить, как продавать ИИ-продукты, если старые модели (per-seat SaaS) больше не работают. Проблема: клиенты платят за «технологию» и не видят эффекта в бизнесе. Технология есть, эффекта нет.</p>
+        <p>Прямая цитата: <em>«AI катастрофически изменил стоимость написания кода и&nbsp;вместе с&nbsp;ней старые правила конкуренции. Когда почти любую фичу можно скопировать за&nbsp;дни, просто код перестаёт быть преимуществом»</em>. Решение — Service as a Software: оплата привязана к результату, не к доступу к продукту.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Код больше не главный актив. Устойчивость, персонализация и привязка оплаты к бизнес-результату — вот новое конкурентное преимущество.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 09</div>
+      <div class="talk-name">Рафаэл Тонаканян</div>
+      <div class="talk-role">Руководитель агентной разработки</div>
+      <div class="talk-company">Сбер</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Эволюция агентной разработки в Сбере»</div>
+      <div class="talk-text">
+        <p>Задача: построить корпоративную архитектуру мульти-агентной системы. Первая версия (2024) — набор отдельных ИИ-помощников для разных задач. Проблема: пользователи не знали, какому помощнику какой вопрос задать, терялись в интерфейсах.</p>
+        <p>Эволюция: внедрили <strong>агента-оркестратора</strong>, который принимает любой запрос пользователя и сам направляет его к нужному специализированному агенту. Пользователь не выбирает инструмент — выбирает оркестратор.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>При мульти-агентной архитектуре обязателен агент-оркестратор. Иначе пользователь не разберётся, какому агенту задать вопрос, и будет саботировать весь продукт.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 10</div>
+      <div class="talk-name">Ксения Кузнецова</div>
+      <div class="talk-role">Руководитель продуктового направления</div>
+      <div class="talk-company">Прегель</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Готовы ли компании к агентной архитектуре»</div>
+      <div class="talk-text">
+        <p>Задача: оценить готовность российских компаний строить мульти-агентные системы самостоятельно. Проанализировали отчёт Forrester 2026 и собственный опыт работы с корпоративными клиентами.</p>
+        <p>Главная цифра: <strong>75% компаний провалят попытку построить агентную архитектуру самостоятельно</strong>. Причина не в технологии (она готова), а в отсутствии организационной зрелости. Прямая цитата из её доклада: <em>«Технология готова. Организации — нет»</em>.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Три из четырёх компаний провалят попытку построить агентную архитектуру самостоятельно. Нужны либо внешние эксперты, либо готовые продуктовые решения — не стартап с нуля.</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="outro">
+  <div class="outro-label">Что из этого применимо в клинике</div>
+  <h3 class="outro-title">Опыт банков и&nbsp;промышленности переносится в&nbsp;клинику напрямую. Все 10&nbsp;выводов работают.</h3>
+  <div class="outro-body">
+    <p>Главное, что объединяет все доклады: технология уже готова, провалы случаются на людях и на процессах. Это не отраслевая специфика банков или промышленности — это одинаково работает в клинике, стоматологии, косметологии.</p>
+    <p>На следующей неделе проведу <strong>онлайн-встречу</strong>, где подробно разберём: как опыт этих спикеров применяется именно в&nbsp;медицинском сегменте, где начинать, с&nbsp;какими первыми 2–3 процессами в&nbsp;клинике стоит экспериментировать, и&nbsp;как не&nbsp;попасть в&nbsp;75%&nbsp;провалов Forrester.</p>
+    <p>Приглашу подписчиков через отдельный пост. Если хочется — напишите в&nbsp;директ, добавлю в&nbsp;приоритетный список.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-top">
+    <div><strong>Инсайты</strong> · консалтинговое агентство · стратегический маркетинг для клиник</div>
+    <div>Выпуск 017 · 30 октября 2026</div>
+  </div>
+  <div class="foot-sources">
+    <strong>Источник:</strong> AI Native Conf 2026 · 20 октября 2026, Москва · кластер «Ломоносов» · организатор Онтико · полные материалы конференции на ainativeconf.ru/llms-full.txt<br>
+    <em>Должности и роли спикеров указаны по&nbsp;состоянию на&nbsp;октябрь 2026 на&nbsp;основании материалов конференции.</em>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Новость дня · 27 октября 2026 · Все массово начали ИИ-оптимизировать клиники — и это самый быстрый путь к штрафу 38 миллионов. Что должен знать каждый собственник в 2026</title>
+<title>Новость дня · 30 октября 2026 · AI Native Conf 2026 — короткая выжимка по докладам со спикерами, компаниями и реальным опытом</title>
 <style>
   :root{
     --red:#C0392B;--dark:#2A2A2A;--dark2:#4A4A4A;--gray:#9A9A9A;
@@ -27,71 +27,58 @@
   .nav-links a.active{color:var(--red);}
   .nav-badge{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;}
 
-  .hero{padding:70px 60px 50px;border-bottom:1px solid var(--lgray);}
+  .hero{padding:60px 60px 40px;border-bottom:1px solid var(--lgray);}
   .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:18px;}
-  .hero-title{font-size:clamp(34px,4.4vw,56px);font-weight:700;line-height:1.08;color:var(--dark);margin-bottom:10px;}
-  .hero-sub{font-size:clamp(18px,2.2vw,26px);font-style:italic;font-weight:700;color:var(--red);margin-bottom:28px;}
-  .hero-divider{width:60px;height:3px;background:var(--red);margin-bottom:24px;}
+  .hero-title{font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.1;color:var(--dark);margin-bottom:10px;}
+  .hero-sub{font-size:clamp(17px,2vw,22px);font-style:italic;font-weight:700;color:var(--red);margin-bottom:24px;}
+  .hero-divider{width:60px;height:3px;background:var(--red);margin-bottom:20px;}
   .hero-meta{display:flex;flex-wrap:wrap;gap:22px;color:var(--dark2);font-size:14px;}
   .hero-meta-line{display:flex;align-items:center;gap:10px;}
   .hero-meta-dot{width:8px;height:8px;border-radius:50%;background:var(--red);}
 
-  .editorial{display:grid;grid-template-columns:340px 1fr;gap:48px;padding:70px 60px;border-bottom:1px solid var(--lgray);background:#fff;align-items:start;}
-  .editorial-photo-wrap{position:relative;}
-  .editorial-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-top:4px solid var(--red);box-shadow:0 6px 28px rgba(0,0,0,.12);display:block;}
-  .editorial-photo-cap{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gray);text-transform:uppercase;margin-top:14px;line-height:1.5;}
-  .editorial-photo-cap b{color:var(--dark);}
-  .editorial-text{padding-top:6px;}
-  .editorial-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
-  .editorial-title{font-size:clamp(22px,2.4vw,30px);font-weight:700;color:var(--dark);line-height:1.22;margin-bottom:22px;}
-  .editorial-body{font-size:16px;color:var(--dark2);line-height:1.75;}
-  .editorial-body p+p{margin-top:14px;}
-  .editorial-body strong{color:var(--dark);}
-  .editorial-body em{color:var(--red);font-style:normal;font-weight:600;}
-  .editorial-sign{margin-top:26px;padding-top:18px;border-top:1px solid var(--lgray);}
-  .editorial-sign-name{font-size:15px;font-weight:700;color:var(--dark);}
-  .editorial-sign-role{font-size:13px;color:var(--gray);font-style:italic;}
-  @media(max-width:900px){.editorial{grid-template-columns:1fr;gap:24px;padding:40px 24px;}.editorial-photo{max-width:340px;}}
+  .intro{padding:50px 60px;border-bottom:1px solid var(--lgray);background:var(--bg-veb);}
+  .intro-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:12px;}
+  .intro-body{font-size:16px;color:var(--dark2);line-height:1.72;max-width:900px;}
+  .intro-body p+p{margin-top:12px;}
+  .intro-body strong{color:var(--dark);}
 
-  article{padding:70px 60px;border-bottom:1px solid var(--lgray);}
-  .story-header{display:flex;align-items:baseline;gap:20px;margin-bottom:18px;}
-  .story-eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:8px;}
-  .story-meta{font-size:13px;color:var(--gray);margin-bottom:6px;}
-  .story-meta strong{color:var(--dark2);font-weight:600;}
-  .block{margin-bottom:32px;}
-  .block-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;border-bottom:1px solid var(--lgray);padding-bottom:8px;margin-bottom:14px;}
-  .block-body{font-size:16px;color:var(--dark2);line-height:1.75;}
-  .block-body p+p{margin-top:14px;}
-  .block-body strong{color:var(--dark);}
-  .pullquote{border-left:3px solid var(--red);background:#fff;padding:22px 28px;margin:22px 0;font-size:20px;color:var(--dark);font-style:italic;font-weight:500;line-height:1.5;}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:22px 0;padding:32px 0;border-top:2px solid var(--red);border-bottom:1px solid var(--lgray);}
-  .stats-item{}
-  .stats-num{font-size:36px;font-weight:900;color:var(--red);font-family:Georgia,serif;line-height:1.1;margin-bottom:6px;}
-  .stats-label{font-size:12px;color:var(--dark2);line-height:1.4;}
-  .react{background:var(--dark);color:#fff;padding:38px 42px;border-top:3px solid var(--red);margin-top:22px;}
-  .react-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,.14);}
-  .react-body{font-size:16px;color:rgba(255,255,255,.86);line-height:1.75;}
-  .react-body p+p{margin-top:14px;}
-  .react-body strong{color:#fff;}
-  .react-body em{color:#fff;font-style:normal;font-weight:700;background:var(--red);padding:1px 8px;border-radius:3px;}
-  .insights-react{background:var(--bg-veb);padding:34px 40px;margin-top:24px;border-left:4px solid var(--red);}
-  .insights-react-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:12px;}
-  .insights-react-body{font-size:16px;color:var(--dark);line-height:1.72;}
-  .insights-react-body p+p{margin-top:12px;}
+  article{padding:50px 60px;border-bottom:1px solid var(--lgray);}
+  .section-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:18px;}
+  .section-title{font-size:28px;font-weight:700;color:var(--dark);line-height:1.15;margin-bottom:30px;max-width:860px;}
 
-  .law-table{width:100%;border-collapse:collapse;margin:18px 0;}
-  .law-table th{background:var(--dark);color:#fff;padding:12px 14px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-align:left;font-weight:700;}
-  .law-table td{padding:14px;font-size:14px;color:var(--dark2);border-bottom:1px solid var(--lgray);vertical-align:top;line-height:1.55;}
-  .law-table tr:nth-child(even) td{background:var(--bg-row);}
-  .law-table td strong{color:var(--dark);}
-  .law-table td.law-name{font-weight:700;color:var(--dark);white-space:nowrap;}
-  .law-table td.law-fine{color:var(--red);font-weight:700;font-family:Georgia,serif;}
+  .talk{display:grid;grid-template-columns:260px 1fr;gap:36px;padding:24px 0;border-bottom:1px solid var(--lgray);}
+  .talk:last-child{border-bottom:none;}
+  .talk-side{padding-top:4px;}
+  .talk-badge{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;border-top:2px solid var(--red);padding-top:10px;margin-bottom:12px;}
+  .talk-name{font-size:19px;font-weight:700;color:var(--dark);line-height:1.25;margin-bottom:6px;}
+  .talk-role{font-size:13px;color:var(--dark2);line-height:1.45;margin-bottom:4px;}
+  .talk-company{font-size:13px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:1px;}
+  .talk-body{}
+  .talk-title{font-family:Georgia,serif;font-size:19px;font-weight:700;color:var(--dark);line-height:1.3;margin-bottom:14px;}
+  .talk-text{font-size:15px;color:var(--dark2);line-height:1.72;}
+  .talk-text p+p{margin-top:10px;}
+  .talk-text strong{color:var(--dark);}
+  .talk-text em{color:var(--red);font-style:normal;font-weight:600;}
+  .talk-takeaway{margin-top:14px;padding:14px 18px;background:var(--bg-veb);border-left:3px solid var(--red);font-size:14px;color:var(--dark);line-height:1.6;}
+  .talk-takeaway strong{color:var(--red);text-transform:uppercase;letter-spacing:1px;font-size:11px;display:block;margin-bottom:4px;}
 
-  footer{background:var(--dark);color:rgba(255,255,255,.55);padding:48px 60px;font-size:13px;}
+  .outro{padding:50px 60px;background:var(--dark);color:#fff;}
+  .outro-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
+  .outro-title{font-size:24px;font-weight:700;color:#fff;margin-bottom:18px;line-height:1.3;max-width:860px;}
+  .outro-body{font-size:16px;color:rgba(255,255,255,.86);line-height:1.72;max-width:860px;}
+  .outro-body p+p{margin-top:12px;}
+
+  footer{background:var(--dark);color:rgba(255,255,255,.55);padding:40px 60px;font-size:13px;border-top:1px solid rgba(255,255,255,.1);}
   footer strong{color:#fff;}
-  footer .foot-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:20px;margin-bottom:20px;}
+  footer .foot-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:18px;margin-bottom:18px;}
   footer .foot-sources{line-height:1.9;}
-  @media(max-width:900px){nav,.hero,article,footer{padding-left:24px;padding-right:24px;}.stats{grid-template-columns:repeat(2,1fr);}.react{padding:26px 24px;}.insights-react{padding:24px 22px;}.law-table{font-size:12px;}.law-table th,.law-table td{padding:8px;}}
+
+  @media(max-width:900px){
+    nav,.hero,.intro,article,.outro,footer{padding-left:24px;padding-right:24px;}
+    .talk{grid-template-columns:1fr;gap:16px;padding:22px 0;}
+    .talk-side{border-top:2px solid var(--red);padding-top:12px;}
+    .talk-badge{border-top:none;padding-top:0;}
+  }
 </style>
 </head>
 <body>
@@ -114,475 +101,232 @@
   <div class="nav-links">
     <a href="/" class="active">Сегодня</a>
     <a href="/archive/">Архив</a>
-    <span class="nav-badge">Новость дня · 27 октября 2026</span>
+    <span class="nav-badge">Новость дня · 30 октября 2026</span>
   </div>
 </nav>
 
 <section class="hero">
-  <div class="hero-eyebrow">Инсайты · новость дня · выпуск 015</div>
-  <h1 class="hero-title">Все массово начали ИИ-оптимизировать клиники&nbsp;— и&nbsp;это самый быстрый путь к&nbsp;штрафу 38&nbsp;миллионов. Что должен знать каждый собственник в&nbsp;2026.</h1>
-  <div class="hero-sub">Чат-бот записи на&nbsp;ChatGPT, расшифровка карт через Claude, рассылка через Gemini&nbsp;— и&nbsp;клиника уже нарушает 4&nbsp;федеральных закона одновременно. Утечка одной базы пациентов&nbsp;= от&nbsp;18&nbsp;до&nbsp;38&nbsp;млн&nbsp;₽. Повторная&nbsp;— до&nbsp;500&nbsp;млн&nbsp;₽. Полная карта штрафов и&nbsp;15&nbsp;пунктов, которые нужно сделать до&nbsp;конца года, чтобы ИИ-внедрение не&nbsp;закрыло вашу клинику.</div>
+  <div class="hero-eyebrow">Инсайты · новость дня · выпуск 017</div>
+  <h1 class="hero-title">AI Native Conf 2026 — выжимка по&nbsp;докладам. Спикеры, компании и&nbsp;реальный опыт внедрения ИИ.</h1>
+  <div class="hero-sub">10&nbsp;докладов главной AI-конференции РФ 2026: что сказали руководители ИИ-направлений Сбера, Райффайзена, Т-Банка, ОТП и&nbsp;специализированных AI-компаний&nbsp;— с&nbsp;какими трудностями столкнулись при внедрении и&nbsp;что из&nbsp;этого применимо в&nbsp;медицинском сегменте.</div>
   <div class="hero-divider"></div>
   <div class="hero-meta">
-    <div class="hero-meta-line"><div class="hero-meta-dot"></div>РФ · 152-ФЗ / 323-ФЗ / 420-ФЗ / ФСТЭК</div>
-    <div class="hero-meta-line"><div class="hero-meta-dot"></div>10 минут чтения</div>
-    <div class="hero-meta-line"><div class="hero-meta-dot"></div>Чек-лист собственнику клиники</div>
+    <div class="hero-meta-line"><div class="hero-meta-dot"></div>Москва · AI Native Conf · 20.10.2026</div>
+    <div class="hero-meta-line"><div class="hero-meta-dot"></div>7 минут чтения</div>
   </div>
 </section>
 
-<section class="editorial">
-  <div class="editorial-photo-wrap">
-    <img class="editorial-photo" src="olga-zibert-2026-10-19.jpg" alt="Ольга Зиберт · Инсайты">
-    <div class="editorial-photo-cap"><b>Ольга Зиберт</b><br>основатель «Инсайты»</div>
-  </div>
-  <div class="editorial-text">
-    <div class="editorial-eyebrow">колонка редактора</div>
-    <h2 class="editorial-title">Все массово начали ИИ-оптимизировать клиники. И&nbsp;именно это стало главным путём к&nbsp;штрафу в&nbsp;десятки миллионов рублей</h2>
-    <div class="editorial-body">
-      <p>Осенью 2026 рынок клиник ворвался в&nbsp;ИИ-гонку. Собственники наперегонки заказывают чат-ботов записи, подключают ChatGPT к&nbsp;колл-центру, пропускают медицинские карты через Claude для «удобной расшифровки», настраивают маркетинговые рассылки через Gemini. Заголовки конференций пестрят словами «AI-ресепшн», «нейро-администратор», «ИИ-врач». <strong>Это стало новой нормой: не&nbsp;внедрил ИИ&nbsp;— отстал от&nbsp;рынка</strong>.</p>
-      <p>Проблема в&nbsp;том, что <em>эта новая норма сталкивается со&nbsp;старым, но&nbsp;полностью переписанным законодательством</em>. Каждый подключённый ChatGPT к&nbsp;базе пациентов&nbsp;— это нарушение статей 12 и&nbsp;18 Федерального закона 152-ФЗ одновременно. Каждая передача снимка через зарубежный сервис&nbsp;— штраф от&nbsp;1&nbsp;до&nbsp;6&nbsp;миллионов&nbsp;₽. Утечка одной базы пациентов (а&nbsp;утечки у&nbsp;vibe-coded инструментов&nbsp;— вопрос недель, а&nbsp;не&nbsp;лет)&nbsp;— от&nbsp;18&nbsp;до&nbsp;38&nbsp;миллионов&nbsp;₽ за&nbsp;один инцидент.</p>
-      <p>420-ФЗ от&nbsp;30.11.2024 ввёл фиксированные штрафы: <strong>не процент от&nbsp;выручки, а&nbsp;твёрдые суммы в&nbsp;миллионах рублей</strong>. С&nbsp;1&nbsp;сентября 2025 заработали новые правила согласия на&nbsp;спец. данные. С&nbsp;марта 2023 трансграничная передача требует отдельного уведомления Роскомнадзора. А&nbsp;собственник в&nbsp;это время покупает «удобный ИИ-бот у&nbsp;фрилансера за&nbsp;50&nbsp;тысяч» и&nbsp;не&nbsp;понимает, что подписал себе риск на&nbsp;15–38&nbsp;миллионов.</p>
-      <p>Я собрала в&nbsp;одной статье всю актуальную картину: 10&nbsp;законов, которые должна знать каждая клиника, 7&nbsp;главных операционных рисков 2026&nbsp;года (ИИ&nbsp;— риск&nbsp;№2 из&nbsp;семи), полную шкалу штрафов по&nbsp;420-ФЗ с&nbsp;конкретными цифрами и&nbsp;сценариями, отдельный разбор трансграничной передачи (которая в&nbsp;2026 стала почти невозможной для&nbsp;ИИ-сервисов) и&nbsp;чек-лист из&nbsp;15&nbsp;пунктов, который собственник должен проверить до&nbsp;конца года.</p>
-      <p>Это не&nbsp;паника и&nbsp;не&nbsp;призыв отказаться от&nbsp;ИИ. Это рабочий документ: <strong>как внедрять ИИ в&nbsp;клинику так, чтобы не&nbsp;попасть под&nbsp;статью 13.11 КоАП с&nbsp;суммой в&nbsp;10&nbsp;цифр</strong>. Безопасная архитектура возможна, соответствие достижимо. Главное условие — гибридный ИИ-стек, полностью развёрнутый в&nbsp;контуре РФ, в&nbsp;соответствии со&nbsp;всеми законами о&nbsp;персональных данных и&nbsp;трансграничной передаче.</p>
-    </div>
-    <div class="editorial-sign">
-      <div class="editorial-sign-name">Ольга Зиберт</div>
-      <div class="editorial-sign-role">Инсайты · консалтинговое агентство · стратегический маркетинг для клиник</div>
-    </div>
+<section class="intro">
+  <div class="intro-eyebrow">От&nbsp;редактора</div>
+  <div class="intro-body">
+    <p>Я прошла по всем 23 докладам главной AI-конференции РФ 2026 и выбрала 10 самых практичных — от спикеров уровня руководителей ИИ-направлений крупнейших банков и профильных AI-компаний. Для каждого — короткая выжимка: с какой задачей столкнулась компания, какое решение попробовали, что получилось, какие были сложности.</p>
+    <p>Это <strong>не теоретический разбор</strong>, а <em>реальный опыт практиков</em>, которые уже внедрили ИИ в бизнес и честно рассказывают, где получилось, где нет. В конце статьи — короткое наблюдение, как этот опыт можно переносить в клиническую отрасль, где внедрения ИИ пока только начинаются.</p>
   </div>
 </section>
 
 <article>
-  <div class="story-header">
-    <div>
-      <div class="story-eyebrow">Часть 1 · 10 законов, которые должна знать каждая клиника</div>
-    </div>
-  </div>
-  <div class="story-meta">
-    <strong>Источники:</strong> КонсультантПлюс · Гарант · 152-ФЗ · 323-ФЗ · 242-ФЗ · 420-ФЗ · ФСТЭК · Роскомнадзор · Приказ № 274 · Приказ ФСТЭК № 21 · ст. 13.11 КоАП РФ · октябрь 2026
-  </div>
+  <div class="section-eyebrow">10 докладов — опыт из первых рук</div>
+  <h2 class="section-title">Руководители ИИ-направлений крупнейших компаний РФ&nbsp;— о&nbsp;том, что получилось и&nbsp;что нет</h2>
 
-  <div class="stats">
-    <div class="stats-item">
-      <div class="stats-num">10</div>
-      <div class="stats-label">нормативных актов,<br>регулирующих клинику</div>
+  <!-- 1 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 01</div>
+      <div class="talk-name">Сергей Рябов</div>
+      <div class="talk-role">Руководитель направления AI-трансформации</div>
+      <div class="talk-company">Сбер</div>
     </div>
-    <div class="stats-item">
-      <div class="stats-num">15 млн ₽</div>
-      <div class="stats-label">максимальный разовый<br>штраф за утечку</div>
-    </div>
-    <div class="stats-item">
-      <div class="stats-num">500 млн ₽</div>
-      <div class="stats-label">верхний потолок<br>оборотного штрафа</div>
-    </div>
-    <div class="stats-item">
-      <div class="stats-num">0</div>
-      <div class="stats-label">зарубежных ИИ-сервисов,<br>которые можно использовать</div>
+    <div class="talk-body">
+      <div class="talk-title">«AI Native трансформация» — keynote</div>
+      <div class="talk-text">
+        <p>Задача: масштабировать ИИ-агентов на тысячи бизнес-процессов внутри Сбера без потери безопасности и управляемости. Первые попытки прикрутить ChatGPT к существующим процессам дали эффект на уровне «−10% рутины у сотрудника», но не влияли на бизнес-метрики.</p>
+        <p>Поворотная точка: отказ от подхода «добавить ИИ к старому процессу» в пользу <strong>перепроектирования процесса целиком</strong> вокруг ИИ. Эффект измеряется не часами, сэкономленными сотрудникам, а изменением цикла принятия решений и операционными метриками.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Прикручивать ИИ к существующим процессам — тупиковый путь. Нужна перепроектировка сверху: от процесса, не от инструмента.</div>
+      </div>
     </div>
   </div>
 
-  <div class="block">
-    <div class="block-label">01 · Карта нормативной базы — всё, что регулирует работу клиники с данными</div>
-    <div class="block-body">
-      <p>Персональные данные пациентов — <strong>специальная категория</strong> (ст. 10 152-ФЗ). К ним применяются усиленные требования защиты, а штрафы за нарушения — повышенные. Клиника, которая обрабатывает мед. данные, попадает одновременно под 10 нормативных актов:</p>
-      <table class="law-table">
-        <thead>
-          <tr><th>Акт</th><th>Что регулирует</th><th>Что требует от клиники</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="law-name">152-ФЗ</td>
-            <td>Базовые правила обработки персональных данных</td>
-            <td>Регистрация оператора ПД, политика обработки, согласия пациентов, назначение DPO, уведомление РКН</td>
-          </tr>
-          <tr>
-            <td class="law-name">323-ФЗ</td>
-            <td>Врачебная тайна, охрана здоровья граждан</td>
-            <td>Защита информации о пациенте, ограничение доступа только медперсоналу, регламент разглашения</td>
-          </tr>
-          <tr>
-            <td class="law-name">242-ФЗ</td>
-            <td>Локализация ПД на территории РФ (ст. 18 ч. 5 152-ФЗ)</td>
-            <td>Все серверы хранения и обработки ПД пациентов обязаны быть физически в РФ</td>
-          </tr>
-          <tr>
-            <td class="law-name">420-ФЗ (от 30.11.2024)</td>
-            <td>Повышенные штрафы за утечки персональных данных</td>
-            <td>Готовность к штрафам 3–15 млн ₽ разово, до 500 млн ₽ оборотно за повторное</td>
-          </tr>
-          <tr>
-            <td class="law-name">ст. 10 152-ФЗ</td>
-            <td>Специальные категории ПД (данные о здоровье)</td>
-            <td>Отдельное письменное согласие пациента на обработку мед. данных</td>
-          </tr>
-          <tr>
-            <td class="law-name">ст. 11 152-ФЗ</td>
-            <td>Биометрические ПД (фото, отпечатки, снимки)</td>
-            <td>Отдельное согласие на фото пациента, снимки, биометрию. КТ, МРТ, рентген — отдельная категория</td>
-          </tr>
-          <tr>
-            <td class="law-name">ст. 12 152-ФЗ</td>
-            <td>Трансграничная передача ПД</td>
-            <td>Уведомление РКН до начала передачи, отдельное согласие пациента на передачу за рубеж</td>
-          </tr>
-          <tr>
-            <td class="law-name">ст. 13.11 КоАП РФ</td>
-            <td>Административная ответственность в сфере ПД</td>
-            <td>Административное производство при проверках РКН, протоколы, постановления</td>
-          </tr>
-          <tr>
-            <td class="law-name">Приказ ФСТЭК № 21</td>
-            <td>Требования к защите ПД в информационных системах</td>
-            <td>УЗ-2 или УЗ-3 для медицинских данных, аттестация ИС, технические меры защиты</td>
-          </tr>
-          <tr>
-            <td class="law-name">Приказ РКН № 274</td>
-            <td>Классификация ПД по категориям</td>
-            <td>Правильное определение категории обрабатываемых данных, расчёт объёма ответственности</td>
-          </tr>
-        </tbody>
-      </table>
-      <p><strong>Дополнительно для клиник, занимающихся рекламой медицинских услуг:</strong></p>
-      <p>◇ <strong>ФЗ-38 «О рекламе»</strong> — строжайшие ограничения на содержание рекламы мед. услуг. Запрет на обещания результата, демонстрацию случаев из практики без спец. оговорки, использование образа врача без аттестата. Нарушение — штраф до 500 тыс. ₽ за каждое объявление.<br>
-      ◇ <strong>Закон о рекламе лекарств</strong> — реклама рецептурных препаратов разрешена только в специализированных мед. изданиях. Клиника, продвигающая лечение с указанием препаратов, попадает под регулирование.<br>
-      ◇ <strong>Закон о защите прав потребителей</strong> — применяется ко всем мед. услугам. Клиент имеет право на полную информацию, компенсацию за некачественную услугу.</p>
+  <!-- 2 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 02</div>
+      <div class="talk-name">Андрей Усенко</div>
+      <div class="talk-role">Руководитель трансформации</div>
+      <div class="talk-company">Райффайзен Банк</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Не ускорять старую организацию, а построить новую»</div>
+      <div class="talk-text">
+        <p>Задача: ускорить вывод новых банковских продуктов на рынок. Первое решение — ИИ-помощники для каждой роли (аналитик, юрист, маркетолог). Результат: продукт выходит быстрее на 15–20%, но архитектура и регламенты всё те же, бутылочное горлышко просто смещается.</p>
+        <p>Поворотная точка: отказались от «ИИ-помощников для ролей» в пользу <em>перестройки сквозного процесса целиком</em>. Единицей трансформации стал не сотрудник, а end-to-end процесс с измеримым бизнес-результатом.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Единицей AI-трансформации должен быть сквозной процесс, а не роль, не сотрудник, не отдельный агент.</div>
+      </div>
     </div>
   </div>
 
-  <div class="insights-react">
-    <div class="insights-react-label">Инсайты · прикладной вывод</div>
-    <div class="insights-react-body">
-      <p>Эта таблица — <strong>первая вещь, которую нужно отдать юристу клиники</strong>. Пусть он напротив каждого акта напишет: что уже сделано, что не сделано, что требует срочной работы. Через месяц вы получите карту соответствия вашей клиники, которая покажет красные зоны.</p>
-      <p>Если юриста в штате нет — это разовая задача, которую можно поручить внешнему специалисту. Стоимость такого аудита: <strong>50–120 тыс. ₽</strong>. Это дешевле, чем один штраф 500 тыс. ₽ за отсутствие согласия пациента.</p>
+  <!-- 3 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 03</div>
+      <div class="talk-name">Богдан Гарбар</div>
+      <div class="talk-role">Руководитель AI-направления</div>
+      <div class="talk-company">ОТП Банк</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Экономика ИИ без иллюзий»</div>
+      <div class="talk-text">
+        <p>Задача: честно посчитать, сколько реально стоит ИИ-внедрение и когда окупается. Проблема рынка: подрядчики продают красивые кейсы, но прячут стоимость поддержки, доработок, обучения модели.</p>
+        <p>Разбор реальной структуры затрат: 30% — разработка, 25% — инфраструктура и сопровождение, 25% — change management и обучение сотрудников, 20% — compliance и безопасность. Пилот без учёта хотя бы одной статьи обречён на провал.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Если в коммерческом предложении на ИИ нет 4 статей (разработка, инфра, change management, compliance) — предложение неполное. Не покупайте.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 04</div>
+      <div class="talk-name">Никита Худов</div>
+      <div class="talk-role">Основатель</div>
+      <div class="talk-company">/strategai</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Агенты как часть штата с&nbsp;первого дня: роли, найм и&nbsp;управление»</div>
+      <div class="talk-text">
+        <p>Задача: как встроить ИИ-агентов в бизнес-процессы клиентов (Сбер, DDXFitness, Askona, Самокат) так, чтобы они стали полноценными членами команды, а не инструментами.</p>
+        <p>Опыт показал: ИИ-агента нужно нанимать как сотрудника. У него должна быть должностная инструкция, роль, подчинение, зона ответственности, KPI. Введён фреймворк <strong>трёх уровней автономии</strong>: советник (ИИ анализирует, человек решает), исполнитель с утверждением (ИИ готовит, человек подтверждает), автономный агент (ИИ сам решает в заданных границах).</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Прежде чем «запустить ИИ-агента», ответьте на вопрос: на какой уровень автономии вы готовы его отпустить. Без этого — любой агент будет либо саботироваться, либо делать не то, что нужно.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 05</div>
+      <div class="talk-name">Екатерина Фирсова</div>
+      <div class="talk-role">Руководитель HR-трансформации</div>
+      <div class="talk-company">Altenar</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«AI-трансформация буксует не&nbsp;в&nbsp;коде, а&nbsp;в&nbsp;людях»</div>
+      <div class="talk-text">
+        <p>Задача: внедрить ИИ в маркетинг и продажи. Технология сработала с первого дня. Через 3 месяца — провал. Сотрудники тихо саботировали: не вносили данные, обходили процессы, продолжали работать «по-старому».</p>
+        <p>Прямая цитата: <em>«Катя, а они нас заменят?» — это реальный вопрос от умного взрослого человека</em>. Пришлось вводить отдельный слой — работу со страхами, объяснение, пересмотр мотивации.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Если в проекте внедрения ИИ не заложен работа с командой — проект провалится. Технологию люди саботируют тише, но увереннее, чем старые процессы.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 06</div>
+      <div class="talk-name">Константин Попандопуло</div>
+      <div class="talk-role">Руководитель направления внедрений</div>
+      <div class="talk-company">Umbrella IT</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Почему сотрудники не используют AI: организационные барьеры»</div>
+      <div class="talk-text">
+        <p>Опыт внедрения ИИ в НОВАТЭК, НЛМК и других промышленных клиентах. Задача: разобраться, почему через полгода после пилота 60–70% сотрудников не пользуются ИИ-инструментом, который им дали.</p>
+        <p>Выявили три главных барьера: <strong>страх увольнения</strong> (сотрудник думает, что сам себя заменяет), <strong>страх ответственности</strong> (если ИИ ошибётся — виноват будет кто-то), <strong>отсутствие нового навыка</strong> (не научили правильно формулировать задачи). Решение — не технологии, а HR-процесс сопровождения.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>60–70% провалов AI-пилотов — не технология, а организационные барьеры. Решение всегда через HR, не через IT.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 07</div>
+      <div class="talk-name">Зоя Маттис</div>
+      <div class="talk-role">Руководитель AI-продуктов</div>
+      <div class="talk-company">Т-Банк</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«AI Agent Design Canvas»</div>
+      <div class="talk-text">
+        <p>Задача: научить продуктовые команды Т-Банка разбираться, где действительно нужен ИИ-агент, а где достаточно обычной автоматизации. Проблема: команды бросались делать «ИИ-помощника» в любую задачу, где была коммуникация.</p>
+        <p>Разработали фреймворк — AI Agent Design Canvas: 7 вопросов, которые команда отвечает перед запуском. Если по трём и более ответам сомнения — это не агент, а чат-бот или сценарный скрипт. Сэкономили около трети бюджета ИИ-разработки.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Не каждая задача требует ИИ-агента. Иногда — обычная автоматизация или бот по сценарию. Разбираться в этом нужно до бюджета, а не после.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 08</div>
+      <div class="talk-name">Дмитрий Антипов</div>
+      <div class="talk-role">Руководитель AI-трансформации</div>
+      <div class="talk-company">Сбер / VSRobotics</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Service as a Software» — новая экономика ИИ</div>
+      <div class="talk-text">
+        <p>Задача: переосмыслить, как продавать ИИ-продукты, если старые модели (per-seat SaaS) больше не работают. Проблема: клиенты платят за «технологию» и не видят эффекта в бизнесе. Технология есть, эффекта нет.</p>
+        <p>Прямая цитата: <em>«AI катастрофически изменил стоимость написания кода и&nbsp;вместе с&nbsp;ней старые правила конкуренции. Когда почти любую фичу можно скопировать за&nbsp;дни, просто код перестаёт быть преимуществом»</em>. Решение — Service as a Software: оплата привязана к результату, не к доступу к продукту.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Код больше не главный актив. Устойчивость, персонализация и привязка оплаты к бизнес-результату — вот новое конкурентное преимущество.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 09</div>
+      <div class="talk-name">Рафаэл Тонаканян</div>
+      <div class="talk-role">Руководитель агентной разработки</div>
+      <div class="talk-company">Сбер</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Эволюция агентной разработки в Сбере»</div>
+      <div class="talk-text">
+        <p>Задача: построить корпоративную архитектуру мульти-агентной системы. Первая версия (2024) — набор отдельных ИИ-помощников для разных задач. Проблема: пользователи не знали, какому помощнику какой вопрос задать, терялись в интерфейсах.</p>
+        <p>Эволюция: внедрили <strong>агента-оркестратора</strong>, который принимает любой запрос пользователя и сам направляет его к нужному специализированному агенту. Пользователь не выбирает инструмент — выбирает оркестратор.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>При мульти-агентной архитектуре обязателен агент-оркестратор. Иначе пользователь не разберётся, какому агенту задать вопрос, и будет саботировать весь продукт.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="talk">
+    <div class="talk-side">
+      <div class="talk-badge">Доклад 10</div>
+      <div class="talk-name">Ксения Кузнецова</div>
+      <div class="talk-role">Руководитель продуктового направления</div>
+      <div class="talk-company">Прегель</div>
+    </div>
+    <div class="talk-body">
+      <div class="talk-title">«Готовы ли компании к агентной архитектуре»</div>
+      <div class="talk-text">
+        <p>Задача: оценить готовность российских компаний строить мульти-агентные системы самостоятельно. Проанализировали отчёт Forrester 2026 и собственный опыт работы с корпоративными клиентами.</p>
+        <p>Главная цифра: <strong>75% компаний провалят попытку построить агентную архитектуру самостоятельно</strong>. Причина не в технологии (она готова), а в отсутствии организационной зрелости. Прямая цитата из её доклада: <em>«Технология готова. Организации — нет»</em>.</p>
+        <div class="talk-takeaway"><strong>Главный вывод</strong>Три из четырёх компаний провалят попытку построить агентную архитектуру самостоятельно. Нужны либо внешние эксперты, либо готовые продуктовые решения — не стартап с нуля.</div>
+      </div>
     </div>
   </div>
 </article>
 
-<article>
-  <div class="story-header">
-    <div>
-      <div class="story-eyebrow">Часть 2 · 7 главных рисков клиники 2026</div>
-    </div>
+<section class="outro">
+  <div class="outro-label">Что из этого применимо в клинике</div>
+  <h3 class="outro-title">Опыт банков и&nbsp;промышленности переносится в&nbsp;клинику напрямую. Все 10&nbsp;выводов работают.</h3>
+  <div class="outro-body">
+    <p>Главное, что объединяет все доклады: технология уже готова, провалы случаются на людях и на процессах. Это не отраслевая специфика банков или промышленности — это одинаково работает в клинике, стоматологии, косметологии.</p>
+    <p>На следующей неделе проведу <strong>онлайн-встречу</strong>, где подробно разберём: как опыт этих спикеров применяется именно в&nbsp;медицинском сегменте, где начинать, с&nbsp;какими первыми 2–3 процессами в&nbsp;клинике стоит экспериментировать, и&nbsp;как не&nbsp;попасть в&nbsp;75%&nbsp;провалов Forrester.</p>
+    <p>Приглашу подписчиков через отдельный пост. Если хочется — напишите в&nbsp;директ, добавлю в&nbsp;приоритетный список.</p>
   </div>
-  <div class="story-meta">
-    <strong>Источники:</strong> судебная практика 2024–2026 · Роскомнадзор · прецеденты (НАКФФ) · InfoWatch · октябрь 2026
-  </div>
-
-  <div class="block">
-    <div class="block-label">01 · Риск № 1 — Облачные CRM и МИС с серверами за рубежом</div>
-    <div class="block-body">
-      <p><strong>Что происходит.</strong> Клиника использует международные CRM (Salesforce, HubSpot), Google Workspace для документооборота, Dropbox для хранения карт пациентов, Trello для задач. Данные идут на серверы в США, Ирландии или Германии. Это прямое нарушение ст. 18 ч. 5 152-ФЗ (локализация).</p>
-      <p><strong>Чем заканчивается.</strong> При проверке РКН — предписание убрать иностранные сервисы в 30-дневный срок + штраф за нарушение локализации (до 18 млн ₽ для юрлица по ст. 13.11 ч. 8 КоАП).</p>
-      <p><strong>Что делать.</strong> Переход на российские аналоги: Битрикс24, amoCRM, 1С, Яндекс.Диск Бизнес, VK Teams, Контур.Диадок. Все серверы в РФ, вся обработка в РФ.</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">02 · Риск № 2 — Использование OpenAI / ChatGPT / Anthropic / Google Gemini</div>
-    <div class="block-body">
-      <p><strong>Что происходит.</strong> Клиника внедряет чат-бот на базе ChatGPT API для записи пациентов, использует Claude для подготовки документов, подключает Gemini для расшифровки звонков. Любой из этих сервисов — прямая трансграничная передача ПД в недружественные юрисдикции без уведомления РКН и без согласия пациентов.</p>
-      <p><strong>Чем заканчивается.</strong> Штраф по ст. 13.11 ч. 8 КоАП (нарушение трансграничной передачи) + штраф за отсутствие согласия пациента на передачу его данных за рубеж. При утечке — все дополнительные штрафы по 420-ФЗ (до 15 млн ₽).</p>
-      <p><strong>Что делать.</strong> Переход на архитектуру «ИИ в контуре РФ»: все вычисления и хранение данных пациентов — на серверах в РФ, никаких внешних API в недружественные юрисдикции. Технически это достижимо через гибридный стек моделей, настроенный под конкретные задачи клиники, но детали архитектуры — предмет отдельного проектирования под каждый бизнес.</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">03 · Риск № 3 — Отсутствие согласий пациентов на обработку спец. данных</div>
-    <div class="block-body">
-      <p><strong>Что происходит.</strong> Клиника принимает пациентов, собирает информацию о заболеваниях, лечении, медикаментах — но не берёт отдельного письменного согласия на обработку спец. категории ПД (ст. 10 152-ФЗ). Либо берёт общее согласие на обработку ПД, но не делает отдельный пункт про здоровье.</p>
-      <p><strong>Чем заканчивается.</strong> С 1 сентября 2025 действуют новые правила. Отсутствие корректного согласия на спец. данные — <strong>штраф до 700 тыс. ₽ за юрлицо</strong> по ст. 13.11 ч. 1 КоАП. Проверка выявляет это в первые 15 минут.</p>
-      <p><strong>Что делать.</strong> Переработать все формы согласия: отдельный блок про спец. категорию, отдельная подпись, указание конкретных целей обработки, срок хранения, права пациента. Шаблоны — на сайте Роскомнадзора (обновлены с 01.09.2025).</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">04 · Риск № 4 — Утечки через сотрудников</div>
-    <div class="block-body">
-      <p><strong>Что происходит.</strong> Администратор отправляет базу пациентов на личную почту для «работы дома». Врач делится историей болезни в WhatsApp. Маркетолог экспортирует CRM в Google Sheets для отчёта. Фрилансер-SMM получает полный доступ к базе для «целевой рассылки». Каждый такой эпизод — потенциальная утечка.</p>
-      <p><strong>Чем заканчивается.</strong> При жалобе пациента или факте публикации данных — <strong>штраф от 3 до 15 млн ₽</strong> по 420-ФЗ (в зависимости от количества субъектов). Повторная утечка — оборотный штраф от 1% до 3% выручки, но не менее 20 млн ₽ и не более 500 млн ₽.</p>
-      <p><strong>Что делать.</strong> NDA с каждым сотрудником, DLP-система (контроль утечек), разграничение доступа по ролям, обучение персонала раз в полгода, запрет на пересылку данных через личные каналы под роспись.</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">05 · Риск № 5 — Vibe coding и неаттестованные ИИ-инструменты</div>
-    <div class="block-body">
-      <p><strong>Что происходит.</strong> Клиника заказывает чат-бот записи у фрилансера за 50 тыс. ₽. Он собирает его на OpenClaw, Гермес или подключает ChatGPT через зарубежный прокси. Код не аттестован ФСТЭК, базы не защищены, ключи доступа светятся во фронтенде. Через месяц — утечка через обычный поиск Google.</p>
-      <p><strong>Чем заканчивается.</strong> Прецедент НАКФФ (Москва, октябрь 2026) — <strong>штраф до 15 млн ₽ за утечку</strong>, причём ссылка на кибератаку не помогла (суд посчитал, что клиника недостаточно защитила данные). Ответственность несёт собственник клиники, не фрилансер.</p>
-      <p><strong>Что делать.</strong> Работать только с подрядчиками, которые имеют лицензии ФСТЭК на деятельность по защите ПД, предоставляют аттестованные инструменты, подписывают договор поручения обработки (ст. 6 ч. 3 152-ФЗ). Vibe coding — только через aудит безопасности и аттестацию.</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">06 · Риск № 6 — Отсутствие регистрации оператора ПД в реестре РКН</div>
-    <div class="block-body">
-      <p><strong>Что происходит.</strong> Клиника работает годами, обрабатывает тысячи пациентов, но никогда не подавала уведомление в Роскомнадзор о намерении обрабатывать ПД (ст. 22 152-ФЗ). Думает, что это «для крупных» или «не для медицины».</p>
-      <p><strong>Чем заканчивается.</strong> При проверке — <strong>штраф от 100 до 300 тыс. ₽</strong> по ст. 13.11 ч. 1 КоАП. При систематическом нарушении — больше. Регистрация бесплатная, занимает 30 дней.</p>
-      <p><strong>Что делать.</strong> Срочно подать уведомление через портал Роскомнадзора (pd.rkn.gov.ru). Указать цели обработки, категории субъектов, перечень данных, меры защиты. После одобрения — указать на сайте клиники номер в реестре.</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">07 · Риск № 7 — Отсутствие политики обработки ПД на сайте клиники</div>
-    <div class="block-body">
-      <p><strong>Что происходит.</strong> На сайте клиники нет размещённой «Политики обработки персональных данных» либо она устаревшая (образец 2018 года). Это грубое нарушение ст. 18.1 152-ФЗ.</p>
-      <p><strong>Чем заканчивается.</strong> <strong>Штраф до 60 тыс. ₽</strong> за первое нарушение, до 100 тыс. ₽ за повторное. При систематическом нарушении — существенно больше. Проверяется автоматически при проверках РКН, не требует жалобы пациента.</p>
-      <p><strong>Что делать.</strong> Разместить актуальную политику обработки ПД (отдельная страница сайта), обновить её под требования 420-ФЗ, добавить информацию о назначении DPO, указать способы связи для реализации прав субъектов данных.</p>
-    </div>
-  </div>
-</article>
-
-<article>
-  <div class="story-header">
-    <div>
-      <div class="story-eyebrow">Часть 3 · Полная шкала штрафов 2026</div>
-    </div>
-  </div>
-  <div class="story-meta">
-    <strong>Источники:</strong> 420-ФЗ · ст. 13.11 КоАП · судебная практика 2025–2026 · РКН · прецедент НАКФФ · октябрь 2026
-  </div>
-
-  <div class="block">
-    <div class="block-label">01 · 420-ФЗ (вступил в силу 30.05.2025) — главное изменение в штрафах за последние 10 лет</div>
-    <div class="block-body">
-      <p>До 2025 года штрафы за нарушение 152-ФЗ были символическими: 15–75 тыс. ₽ для юрлица. 420-ФЗ полностью переписал систему. Теперь штрафы фиксированные и большие — в десятки и сотни раз выше прежних. Для клиник, работающих со спецкатегорией данных, штрафы увеличены ещё в 2 раза.</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">02 · Шкала штрафов — всё по пунктам</div>
-    <div class="block-body">
-      <table class="law-table">
-        <thead>
-          <tr><th>Нарушение</th><th>Статья</th><th>Штраф (юрлицо)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Отсутствие политики обработки ПД на сайте</td>
-            <td>ст. 13.11 ч. 1</td>
-            <td class="law-fine">30 — 60 тыс. ₽</td>
-          </tr>
-          <tr>
-            <td>Отсутствие регистрации оператора ПД в реестре РКН</td>
-            <td>ст. 13.11 ч. 1</td>
-            <td class="law-fine">100 — 300 тыс. ₽</td>
-          </tr>
-          <tr>
-            <td>Отсутствие согласия на обработку обычных ПД</td>
-            <td>ст. 13.11 ч. 2</td>
-            <td class="law-fine">300 — 700 тыс. ₽</td>
-          </tr>
-          <tr>
-            <td><strong>Отсутствие согласия на обработку спец. ПД (здоровье)</strong></td>
-            <td>ст. 13.11 ч. 2.1</td>
-            <td class="law-fine">400 — 700 тыс. ₽</td>
-          </tr>
-          <tr>
-            <td>Нарушение требований к хранению ПД</td>
-            <td>ст. 13.11 ч. 4</td>
-            <td class="law-fine">500 тыс. — 1 млн ₽</td>
-          </tr>
-          <tr>
-            <td>Нарушение правил трансграничной передачи ПД</td>
-            <td>ст. 13.11 ч. 8</td>
-            <td class="law-fine">1 — 6 млн ₽</td>
-          </tr>
-          <tr>
-            <td>Нарушение локализации ПД (ст. 18 ч. 5 152-ФЗ)</td>
-            <td>ст. 13.11 ч. 8</td>
-            <td class="law-fine">6 — 18 млн ₽</td>
-          </tr>
-          <tr>
-            <td><strong>Утечка ПД от 1 до 10 тыс. субъектов</strong></td>
-            <td>ст. 13.11 ч. 15</td>
-            <td class="law-fine">3 — 5 млн ₽</td>
-          </tr>
-          <tr>
-            <td><strong>Утечка ПД от 10 до 100 тыс. субъектов</strong></td>
-            <td>ст. 13.11 ч. 15</td>
-            <td class="law-fine">5 — 10 млн ₽</td>
-          </tr>
-          <tr>
-            <td><strong>Утечка ПД свыше 100 тыс. субъектов</strong></td>
-            <td>ст. 13.11 ч. 15</td>
-            <td class="law-fine">10 — 15 млн ₽</td>
-          </tr>
-          <tr>
-            <td><strong>Утечка спец. категории ПД (здоровье) — любой объём</strong></td>
-            <td>ст. 13.11 ч. 15.1</td>
-            <td class="law-fine">10 — 15 млн ₽</td>
-          </tr>
-          <tr>
-            <td><strong>Повторная утечка ПД</strong></td>
-            <td>ст. 13.11 ч. 16</td>
-            <td class="law-fine">1–3% выручки,<br>но от 20 до 500 млн ₽</td>
-          </tr>
-          <tr>
-            <td>Отказ от обработки ПД по требованию субъекта</td>
-            <td>ст. 13.11 ч. 7</td>
-            <td class="law-fine">400 — 700 тыс. ₽</td>
-          </tr>
-          <tr>
-            <td>Отсутствие уведомления РКН об утечке в 24 часа</td>
-            <td>ст. 13.11 ч. 11</td>
-            <td class="law-fine">1 — 3 млн ₽</td>
-          </tr>
-          <tr>
-            <td>Отсутствие отчёта о результатах расследования утечки (72 часа)</td>
-            <td>ст. 13.11 ч. 12</td>
-            <td class="law-fine">500 тыс. — 1 млн ₽</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="pullquote">
-    Утечка данных одной истории болезни одного пациента — штраф от 3 до 15 млн ₽. Это не теория. Это прецедент НАКФФ, октябрь 2026.
-  </div>
-
-  <div class="block">
-    <div class="block-label">03 · Сценарий «средняя клиника теряет базу» — сколько платит</div>
-    <div class="block-body">
-      <p>Представим реальный сценарий. Клиника на 10 кресел, 15 тыс. пациентов в базе. Из-за уязвимости в сторонней CRM база утекает в даркнет. Пациент пишет жалобу в РКН. Проверка выявляет:</p>
-      <p>◇ Утечка спец. категории ПД (15 тыс. субъектов) — <strong>10–15 млн ₽</strong><br>
-         ◇ Отсутствие уведомления об утечке в 24 часа — <strong>1–3 млн ₽</strong><br>
-         ◇ Отсутствие отчёта в 72 часа — <strong>500 тыс. — 1 млн ₽</strong><br>
-         ◇ Нарушение локализации (CRM на зарубежном сервере) — <strong>6–18 млн ₽</strong><br>
-         ◇ Отсутствие согласий на спец. данные у части пациентов — <strong>400–700 тыс. ₽</strong></p>
-      <p><strong>Общая сумма: от 18 до 38 млн ₽ за один инцидент.</strong> Для средней клиники — это 2–4 года чистой прибыли. Или закрытие.</p>
-      <p>И это без учёта гражданских исков от пациентов (компенсация морального вреда — 50–200 тыс. ₽ с лица), которые идут отдельно.</p>
-    </div>
-  </div>
-</article>
-
-<article>
-  <div class="story-header">
-    <div>
-      <div class="story-eyebrow">Часть 4 · Трансграничная передача — отдельный блок риска</div>
-    </div>
-  </div>
-  <div class="story-meta">
-    <strong>Источники:</strong> ст. 12 152-ФЗ · поправки 2023 года · Приказ РКН о списке стран · октябрь 2026
-  </div>
-
-  <div class="block">
-    <div class="block-label">01 · Что изменилось с 1 марта 2023</div>
-    <div class="block-body">
-      <p>С марта 2023 действуют ужесточённые правила трансграничной передачи ПД. Клиника обязана:</p>
-      <p>◇ <strong>Уведомить Роскомнадзор о намерении</strong> передавать ПД за рубеж до начала такой передачи. Форма — отдельная, через портал РКН.<br>
-         ◇ <strong>Получить отдельное согласие субъекта</strong> на передачу в страну, не обеспечивающую адекватную защиту ПД (список стран утверждён Приказом РКН).<br>
-         ◇ <strong>Оценить риски</strong> и предоставить документацию по требованию Роскомнадзора.</p>
-      <p>РКН имеет право <strong>приостановить трансграничную передачу</strong> своим решением, если признает защиту в стране назначения недостаточной. Для спец. категории данных процедура сложнее — согласие пациента должно быть особо информированным.</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">02 · Что это значит практически для клиники</div>
-    <div class="block-body">
-      <p><strong>Любой из следующих сценариев = нарушение, если не оформлено:</strong></p>
-      <p>◇ Отправка данных пациента врачу-консультанту в Германии (телемедицина)<br>
-         ◇ Использование Google Workspace (данные на серверах в США/Ирландии)<br>
-         ◇ Хранение фото снимков КТ/МРТ в облачном сервисе AWS, Google Cloud, Azure<br>
-         ◇ Использование чат-ботов на OpenAI, Claude, Gemini<br>
-         ◇ Передача данных в партнёрскую клинику за рубежом<br>
-         ◇ Использование международной CRM (Salesforce, HubSpot)</p>
-      <p><strong>Для 2026 года практическая рекомендация — «нулевая трансграничная передача».</strong> Все данные пациентов и все ИИ-вычисления остаются в контуре РФ. Это единственный способ не вести постоянную юридическую войну с РКН.</p>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="block-label">03 · Штраф за трансграничную передачу без уведомления</div>
-    <div class="block-body">
-      <p>До 300 тыс. ₽ — отдельная статья по ст. 13.11 ч. 8.1 КоАП. При комбинации с утечкой — суммируется с основным штрафом. На практике — проверяется РКН автоматически при каждом аудите.</p>
-    </div>
-  </div>
-</article>
-
-<article>
-  <div class="story-header">
-    <div>
-      <div class="story-eyebrow">Часть 5 · Чек-лист собственнику клиники до конца 2026</div>
-    </div>
-  </div>
-  <div class="story-meta">
-    <strong>Источники:</strong> Инсайты · по данным проверок РКН 2025–2026 · октябрь 2026
-  </div>
-
-  <div class="block">
-    <div class="block-label">01 · 15 пунктов, которые должны быть сделаны</div>
-    <div class="block-body">
-      <p><strong>Юридический блок (сделать за 1 месяц):</strong></p>
-      <p>1 · Назначить DPO (ответственного за ПД) приказом по клинике<br>
-         2 · Подать уведомление оператора ПД в реестр Роскомнадзора<br>
-         3 · Разместить актуальную Политику обработки ПД на сайте<br>
-         4 · Переработать формы согласия пациентов — отдельный блок для спец. категории ПД<br>
-         5 · Разработать регламент реагирования на инциденты (уведомление РКН в 24/72 часа)</p>
-      <p><strong>Технический блок (сделать за 2 месяца):</strong></p>
-      <p>6 · Проверить все IT-сервисы на локализацию (все серверы в РФ)<br>
-         7 · Исключить OpenAI, Claude, Gemini и другие зарубежные ИИ-сервисы<br>
-         8 · Выстроить ИИ-стек, полностью развёрнутый в контуре РФ, без внешних API в недружественные юрисдикции<br>
-         9 · Настроить логирование доступа к ПД в CRM и МИС<br>
-         10 · Внедрить DLP (контроль утечек через сотрудников)<br>
-         11 · Пройти аттестацию ИС по требованиям ФСТЭК (если УЗ-2 или УЗ-3)</p>
-      <p><strong>Операционный блок (постоянно):</strong></p>
-      <p>12 · Подписать NDA с каждым сотрудником, имеющим доступ к ПД<br>
-         13 · Провести обучение персонала по работе с данными пациентов (раз в полгода)<br>
-         14 · Регулярный аудит доступов (кто имеет, что открыто, зачем)<br>
-         15 · Внутренний аудит соответствия 152-ФЗ раз в полгода (можно самим по чек-листу РКН)</p>
-    </div>
-  </div>
-
-  <div class="react">
-    <div class="react-label">Реакция Инсайты · что мы говорим клиникам</div>
-    <div class="react-body">
-      <p>За 15 лет работы с клиниками я видела много форматов пренебрежения регулированием: «нас это не касается», «мы маленькие», «у нас хороший врач, никто не пожалуется», «проверка будет — тогда и сделаем». В 2026 году эта стратегия закончилась.</p>
-      <p>Штрафы по 420-ФЗ выписываются <em>не только по жалобам пациентов</em>, но и по плановым проверкам РКН, по данным мониторинга интернета (в том числе анализу открытых мест утечек), по сигналам банков о подозрительных транзакциях с мед. данными. РКН в 2026 году проверил <strong>более 1 200 медицинских организаций</strong>, из них 70% получили предписания или штрафы.</p>
-      <p>Моя рекомендация собственнику: <em>не ждать проверки</em>. Выполнить 15-пунктовый чек-лист до конца года, вложить 300–500 тыс. ₽ в юридический и технический аудит, зафиксировать соответствие документально. Это не затраты. Это страховка от штрафа 15 млн ₽, который может прийти в любой момент.</p>
-      <p>И самое главное — <strong>никаких OpenAI, ChatGPT, Claude, Gemini и других зарубежных API в контуре клиники</strong>. Правильная архитектура в 2026 году — гибридный ИИ-стек, полностью развёрнутый в контуре РФ, с инфраструктурой в российских ЦОДах. Это и есть «ИИ в контуре РФ» юридически, и это единственный путь в 2026 году.</p>
-    </div>
-  </div>
-
-  <div class="insights-react">
-    <div class="insights-react-label">Инсайты · что мы делаем в MEDCORE·AI</div>
-    <div class="insights-react-body">
-      <p>Параллельно с консалтингом мы разрабатываем <strong>MEDCORE·AI</strong> — ИИ-ядро управления клиникой из 13 специализированных агентов (от маркетолога до юриста). Весь продукт изначально проектируется под полное соответствие 152-ФЗ: гибридный стек в контуре РФ, нулевая трансграничная передача. Первый пилот запускаем в ноябре 2026.</p>
-      <p>Если интересно подключиться на пилотной стадии как founding customer — напишите в директ, расскажу условия. Пока нужны смелые собственники клиник, готовые тестировать и влиять на архитектуру продукта.</p>
-    </div>
-  </div>
-</article>
+</section>
 
 <footer>
   <div class="foot-top">
     <div><strong>Инсайты</strong> · консалтинговое агентство · стратегический маркетинг для клиник</div>
-    <div>Выпуск 015 · 27 октября 2026</div>
+    <div>Выпуск 017 · 30 октября 2026</div>
   </div>
   <div class="foot-sources">
-    <strong>Источники:</strong><br>
-    <em>Нормативная база:</em><br>
-    152-ФЗ «О персональных данных» (с изменениями на 2026)<br>
-    323-ФЗ «Об основах охраны здоровья граждан в РФ»<br>
-    242-ФЗ (поправки к 152-ФЗ, 2015) — локализация ПД<br>
-    420-ФЗ от 30.11.2024 — повышенные штрафы (вступил в силу 30.05.2025)<br>
-    ст. 10, 11, 12 152-ФЗ — специальные категории ПД, трансграничная передача<br>
-    ст. 13.11 КоАП РФ — административная ответственность<br>
-    Приказ ФСТЭК № 21 — требования к защите ПД в ИС<br>
-    Приказ Роскомнадзора № 274 — классификация ПД<br>
-    ФЗ-38 «О рекламе» — регулирование рекламы мед. услуг<br>
-    <em>Прецеденты и судебная практика:</em><br>
-    SecPost — «Московскую клинику НАКФФ оштрафовали за утечку данных пациентов» (09.10.2026)<br>
-    Vademec — «Клиника НАКФФ может заплатить до 15 млн ₽ за распространение данных пациентов» (09.10.2026)<br>
-    Privacy Advocates — разбор судебного постановления по НАКФФ<br>
-    InfoWatch — «Россия стала второй в мире по утечкам данных из клиник» (14.08.2025)<br>
-    <em>Руководства и памятки:</em><br>
-    Роскомнадзор — памятки для медицинских организаций, образцы согласия (с 01.09.2025)<br>
-    МедБизнес (medbusiness.space) — «Как избежать штрафов за персональные данные в 2026»<br>
-    tck-b.ru — «ФЗ-152 для клиники: персональные данные пациентов в 2026»<br>
-    1cbit.ru — «Разбор ФЗ-152: Как клинике выполнить требования по защите ПД»<br>
-    mediator-med.ru — «Что должен сделать руководитель клиники в 2026 году»<br>
-    <em>Статистика проверок:</em><br>
-    Роскомнадзор — ежегодный отчёт о проверках операторов ПД 2025<br>
-    Роскомнадзор — статистика выявленных нарушений в сфере здравоохранения 2026
+    <strong>Источник:</strong> AI Native Conf 2026 · 20 октября 2026, Москва · кластер «Ломоносов» · организатор Онтико · полные материалы конференции на ainativeconf.ru/llms-full.txt<br>
+    <em>Должности и роли спикеров указаны по&nbsp;состоянию на&nbsp;октябрь 2026 на&nbsp;основании материалов конференции.</em>
   </div>
 </footer>
 
